@@ -22,7 +22,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 
-import java.util.Comparator;
+import java.util.Comparator; 
 
 
 /**
@@ -70,21 +70,21 @@ public class FranchiseService {
             .switchIfEmpty(Mono.error(
                 new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")))
             .map(ent -> {
-                // 1. buscar sucursal
+                // find a branch
                 BranchEntity branch = ent.getBranches().stream()
                     .filter(b -> b.getId().equals(branchId))
                     .findFirst()
                     .orElseThrow(() -> new ResponseStatusException(
                             HttpStatus.NOT_FOUND, "Branch not found"));
 
-                // 2. inicializar lista de productos si viene null
+                // initialize product list if null is present
                 if (branch.getProducts() == null) branch.setProducts(new ArrayList<>());
 
-                // 3. agregar producto mapeado
+                // add mapped product
                 branch.getProducts().add(mapper.map(product, ProductEntity.class));
                 return ent;
             })
-            .flatMap(repo::save)                     // guardar en Mongo
+            .flatMap(repo::save)                     // save to Mongo
             .map(saved -> mapper.map(saved, Franchise.class));
     }
 
@@ -97,25 +97,25 @@ public class FranchiseService {
             .switchIfEmpty(Mono.error(
                 new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")))
             .map(ent -> {
-                // ── buscar la sucursal ──
+                // find the branch
                 BranchEntity branch = ent.getBranches().stream()
                     .filter(b -> b.getId().equals(bid))
                     .findFirst()
                     .orElseThrow(() -> new ResponseStatusException(
                             HttpStatus.NOT_FOUND, "Branch not found"));
 
-                // ── buscar el producto ──
+                // search for the product
                 ProductEntity prod = branch.getProducts().stream()
                     .filter(p -> p.getId().equals(pid))
                     .findFirst()
                     .orElseThrow(() -> new ResponseStatusException(
                             HttpStatus.NOT_FOUND, "Product not found"));
 
-                // ── actualizar stock ──
+                // update stock
                 prod.setStock(newStock);
-                return ent;                 // devolvemos la entidad modificada
+                return ent;                 // we return the modified entity
             })
-            .flatMap(repo::save)            // persistimos en Mongo
+            .flatMap(repo::save)            // we persist in Mongo
             .map(saved -> mapper.map(saved, Franchise.class));
     }
 
@@ -128,20 +128,20 @@ public class FranchiseService {
             .switchIfEmpty(Mono.error(
                 new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")))
             .flatMap(ent -> {
-                // ── buscar la sucursal ──
+                // find the branch
                 BranchEntity branch = ent.getBranches().stream()
                     .filter(b -> b.getId().equals(bid))
                     .findFirst()
                     .orElseThrow(() -> new ResponseStatusException(
                             HttpStatus.NOT_FOUND, "Branch not found"));
 
-                // ── eliminar el producto ──
+                // delete the product 
                 boolean removed = branch.getProducts().removeIf(p -> p.getId().equals(pid));
                 if (!removed) {
                     throw new ResponseStatusException(
                             HttpStatus.NOT_FOUND, "Product not found");
                 }
-                return repo.save(ent).then();   // .then() → Mono<Void>
+                return repo.save(ent).then();   
             });
     }
 
@@ -154,10 +154,10 @@ public class FranchiseService {
             .flatMapMany(ent -> Flux.fromIterable(ent.getBranches()))
             .filter(br -> br.getProducts() != null && !br.getProducts().isEmpty())
             .map(br -> {
-                // Obtener el producto con más stock dentro de la sucursal
+                // Get the product with the most stock in the branch
                 ProductEntity top = br.getProducts().stream()
                     .max(Comparator.comparingInt(ProductEntity::getStock))
-                    .orElseThrow();   // nunca null por el filter anterior
+                    .orElseThrow();   // never null by the previous filter
 
                 return new ProductStockDto(
                         top.getId(),
@@ -169,6 +169,48 @@ public class FranchiseService {
     }
 
 
+    // Rename franchise
+    public Mono<Franchise> renameFranchise(String fid, String newName) {
+        return repo.findById(fid)
+            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")))
+            .map(ent -> { ent.setName(newName); return ent; })
+            .flatMap(repo::save)
+            .map(e -> mapper.map(e, Franchise.class));
+    }
 
+    // Rename branch
+    public Mono<Franchise> renameBranch(String fid, String bid, String newName) {
+        return repo.findById(fid)
+            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")))
+            .map(ent -> {
+                BranchEntity br = ent.getBranches().stream()
+                    .filter(b -> b.getId().equals(bid))
+                    .findFirst()
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Branch not found"));
+                br.setName(newName);
+                return ent;
+            })
+            .flatMap(repo::save)
+            .map(e -> mapper.map(e, Franchise.class));
+    }
 
+    // Rename product
+    public Mono<Franchise> renameProduct(String fid, String bid, String pid, String newName) {
+        return repo.findById(fid)
+            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")))
+            .map(ent -> {
+                BranchEntity br = ent.getBranches().stream()
+                    .filter(b -> b.getId().equals(bid))
+                    .findFirst()
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Branch not found"));
+                ProductEntity pr = br.getProducts().stream()
+                    .filter(p -> p.getId().equals(pid))
+                    .findFirst()
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
+                pr.setName(newName);
+                return ent;
+            })
+            .flatMap(repo::save)
+            .map(e -> mapper.map(e, Franchise.class));
+    }
 }

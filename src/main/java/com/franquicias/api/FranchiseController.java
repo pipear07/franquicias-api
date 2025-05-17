@@ -3,6 +3,7 @@ package com.franquicias.api;
 import com.franquicias.api.dto.AddBranchRequest;
 import com.franquicias.api.dto.AddProductRequest;
 import com.franquicias.api.dto.ProductStockDto;
+import com.franquicias.api.dto.RenameRequest;
 import com.franquicias.api.dto.UpdateStockRequest;
 import com.franquicias.domain.model.Branch;
 import com.franquicias.domain.model.Franchise;
@@ -14,7 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import org.modelmapper.ModelMapper;      // ← IMPORTA ESTO
+import org.modelmapper.ModelMapper;  // It is a small library that is responsible for copying data from one object to another automatically
 
 @RestController
 @RequestMapping("/franchises")
@@ -81,4 +82,30 @@ public class FranchiseController {
     }
 
 
+    // Rename franchise
+    @PatchMapping("/{fid}")
+    public Mono<Franchise> renameFranchise(
+        @PathVariable String fid,
+        @Valid @RequestBody RenameRequest body) {
+    return service.renameFranchise(fid, body.getName());
+    }
+
+    // Rename branch
+    @PatchMapping("/{fid}/branches/{bid}")
+    public Mono<Franchise> renameBranch(
+        @PathVariable String fid,
+        @PathVariable String bid,
+        @Valid @RequestBody RenameRequest body) {
+    return service.renameBranch(fid, bid, body.getName());
+    }
+
+    // Rename product
+    @PatchMapping("/{fid}/branches/{bid}/products/{pid}")
+    public Mono<Franchise> renameProduct(
+        @PathVariable String fid,
+        @PathVariable String bid,
+        @PathVariable String pid,
+        @Valid @RequestBody RenameRequest body) {
+    return service.renameProduct(fid, bid, pid, body.getName());
+    }
 }
