@@ -1,0 +1,13 @@
+cat > .gitignore <<'EOF'
+### Java / Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml
+*.class
+# Logs
+*.log
+# OS
+.DS_Store
+Thumbs.db
+EOF
