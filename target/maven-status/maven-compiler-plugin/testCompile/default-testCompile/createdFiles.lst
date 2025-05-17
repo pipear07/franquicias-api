@@ -1,0 +1,6 @@
+com\franquicias\FranquiciasApiApplicationTests.class
+com\franquicias\domain\service\FranchiseServiceTest.class
+com\franquicias\entrypoints\rest\HealthControllerTest.class
+com\franquicias\api\AddProductRequestTest.class
+com\franquicias\entrypoints\rest\FranchiseControllerTest.class
+com\franquicias\infrastructure\db\MongoFranchiseAdapterTest.class

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FranchiseController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">franquicias-api</a> &gt; <a href="index.source.html" class="el_package">com.franquicias.api</a> &gt; <span class="el_source">FranchiseController.java</span></div><h1>FranchiseController.java</h1><pre class="source lang-java linenums">package com.franquicias.api;
+
+import com.franquicias.api.dto.AddBranchRequest;
+import com.franquicias.api.dto.AddProductRequest;
+import com.franquicias.api.dto.ProductStockDto;
+import com.franquicias.api.dto.RenameRequest;
+import com.franquicias.api.dto.UpdateStockRequest;
+import com.franquicias.domain.model.Branch;
+import com.franquicias.domain.model.Franchise;
+import com.franquicias.domain.model.Product;
+import com.franquicias.domain.service.FranchiseService;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import org.modelmapper.ModelMapper;  // It is a small library that is responsible for copying data from one object to another automatically
+
+@RestController
+@RequestMapping(&quot;/franchises&quot;)
+@RequiredArgsConstructor
+public class FranchiseController {
+
+    private final FranchiseService service;
+    private final ModelMapper mapper;
+
+    @GetMapping
+    public Flux&lt;Franchise&gt; list() {
+<span class="fc" id="L32">        return service.findAll();</span>
+    }
+
+   @GetMapping(&quot;/{id}&quot;)
+    public Mono&lt;Franchise&gt; get(@PathVariable String id) {
+<span class="fc" id="L37">        return service.findById(id)</span>
+<span class="fc" id="L38">                      .switchIfEmpty(Mono.error(</span>
+                          new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)
+                      ));
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono&lt;Franchise&gt; create(@Valid @RequestBody Franchise dto) {
+<span class="fc" id="L46">        return service.save(dto);</span>
+    }
+
+    @PostMapping(&quot;/{id}/branches&quot;)
+    public Mono&lt;Franchise&gt; addBranch(@PathVariable String id,
+                                    @Valid @RequestBody AddBranchRequest req) {
+<span class="fc" id="L52">        Branch branch = mapper.map(req, Branch.class);</span>
+<span class="fc" id="L53">        return service.addBranch(id, branch);</span>
+    }
+
+    @PostMapping(&quot;/{fid}/branches/{bid}/products&quot;)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono&lt;Franchise&gt; addProduct(@PathVariable String fid,
+                                    @PathVariable String bid,
+                                    @Valid @RequestBody AddProductRequest body) {
+
+<span class="fc" id="L62">        Product product = mapper.map(body, Product.class);</span>
+<span class="fc" id="L63">        return service.addProduct(fid, bid, product);</span>
+    }
+
+    @PatchMapping(&quot;/{fid}/branches/{bid}/products/{pid}/stock&quot;)
+    public Mono&lt;Franchise&gt; updateStock(@PathVariable String fid,
+                                    @PathVariable String bid,
+                                    @PathVariable String pid,
+                                    @Valid @RequestBody UpdateStockRequest body) {
+
+<span class="fc" id="L72">        return service.updateStock(fid, bid, pid, body.getStock());</span>
+    }
+
+    @DeleteMapping(&quot;/{fid}/branches/{bid}/products/{pid}&quot;)
+    @ResponseStatus(HttpStatus.NO_CONTENT)      
+    public Mono&lt;Void&gt; deleteProduct(@PathVariable String fid,
+                                    @PathVariable String bid,
+                                    @PathVariable String pid) {
+<span class="fc" id="L80">        return service.deleteProduct(fid, bid, pid);</span>
+    }
+
+
+    @GetMapping(&quot;/{fid}/top-stock&quot;)
+    public Flux&lt;ProductStockDto&gt; topStockByBranch(@PathVariable String fid) {
+<span class="fc" id="L86">        return service.topStockByBranch(fid);</span>
+    }
+
+
+    // Rename franchise
+    @PatchMapping(&quot;/{fid}&quot;)
+    public Mono&lt;Franchise&gt; renameFranchise(
+        @PathVariable String fid,
+        @Valid @RequestBody RenameRequest body) {
+<span class="fc" id="L95">    return service.renameFranchise(fid, body.getName());</span>
+    }
+
+    // Rename branch
+    @PatchMapping(&quot;/{fid}/branches/{bid}&quot;)
+    public Mono&lt;Franchise&gt; renameBranch(
+        @PathVariable String fid,
+        @PathVariable String bid,
+        @Valid @RequestBody RenameRequest body) {
+<span class="fc" id="L104">    return service.renameBranch(fid, bid, body.getName());</span>
+    }
+
+    // Rename product
+    @PatchMapping(&quot;/{fid}/branches/{bid}/products/{pid}&quot;)
+    public Mono&lt;Franchise&gt; renameProduct(
+        @PathVariable String fid,
+        @PathVariable String bid,
+        @PathVariable String pid,
+        @Valid @RequestBody RenameRequest body) {
+<span class="fc" id="L114">    return service.renameProduct(fid, bid, pid, body.getName());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

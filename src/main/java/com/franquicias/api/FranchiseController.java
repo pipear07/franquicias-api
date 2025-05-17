@@ -13,6 +13,8 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import org.modelmapper.ModelMapper;  // It is a small library that is responsible for copying data from one object to another automatically
@@ -30,9 +32,12 @@ public class FranchiseController {
         return service.findAll();
     }
 
-    @GetMapping("/{id}")
+   @GetMapping("/{id}")
     public Mono<Franchise> get(@PathVariable String id) {
-        return service.findById(id);
+        return service.findById(id)
+                      .switchIfEmpty(Mono.error(
+                          new ResponseStatusException(HttpStatus.NOT_FOUND, "Franchise not found")
+                      ));
     }
 
     @PostMapping

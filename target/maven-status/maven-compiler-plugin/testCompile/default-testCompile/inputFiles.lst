@@ -1,0 +1,6 @@
+C:\Repos2\franquicias-api\src\test\java\com\franquicias\FranquiciasApiApplicationTests.java
+C:\Repos2\franquicias-api\src\test\java\com\franquicias\api\AddProductRequestTest.java
+C:\Repos2\franquicias-api\src\test\java\com\franquicias\entrypoints\rest\FranchiseControllerTest.java
+C:\Repos2\franquicias-api\src\test\java\com\franquicias\infrastructure\db\MongoFranchiseAdapterTest.java
+C:\Repos2\franquicias-api\src\test\java\com\franquicias\domain\service\FranchiseServiceTest.java
+C:\Repos2\franquicias-api\src\test\java\com\franquicias\entrypoints\rest\HealthControllerTest.java
