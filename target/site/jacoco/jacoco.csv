@@ -1,7 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-franquicias-api,com.franquicias.infrastructure.db,MongoFranchiseAdapter,51,105,0,0,6,17,5,11,5,11
-franquicias-api,com.franquicias.domain.service,FranchiseService,18,719,4,6,2,116,5,48,1,47
-franquicias-api,com.franquicias.config,ModelMapperConfig,0,7,0,0,0,2,0,2,0,2
-franquicias-api,com.franquicias.api,FranchiseController,0,383,0,0,0,37,0,23,0,23
-franquicias-api,com.franquicias.entrypoints.rest,HealthController,0,6,0,0,0,2,0,2,0,2
-franquicias-api,com.franquicias,FranquiciasApiApplication,0,8,0,0,0,3,0,2,0,2
