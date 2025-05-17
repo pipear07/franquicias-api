@@ -10,10 +10,9 @@ import com.franquicias.infrastructure.db.FranchiseReactiveRepository;
 import com.franquicias.infrastructure.db.ProductEntity;
 
 import lombok.RequiredArgsConstructor;
-
-import java.util.ArrayList;
-
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -21,9 +20,8 @@ import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-
-import java.util.Comparator; 
-
+import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  * Service with basic operations; we will expand later
@@ -32,186 +30,177 @@ import java.util.Comparator;
 @RequiredArgsConstructor
 public class FranchiseService {
 
+<span class="fc" id="L33">    private static final Logger log = LoggerFactory.getLogger(FranchiseService.class);</span>
+
     private final FranchiseReactiveRepository repo;
     private final ModelMapper mapper;
 
     public Mono&lt;Franchise&gt; save(Franchise dto) {
-<span class="fc" id="L39">        return repo.save(mapper.map(dto, FranchiseEntity.class))</span>
-<span class="fc" id="L40">                   .map(ent -&gt; mapper.map(ent, Franchise.class));</span>
+<span class="fc" id="L39">        log.debug(&quot;Saving franchise: {}&quot;, dto.getName());</span>
+<span class="fc" id="L40">        return repo.save(mapper.map(dto, FranchiseEntity.class))</span>
+<span class="fc" id="L41">                   .map(ent -&gt; {</span>
+<span class="fc" id="L42">                       log.debug(&quot;Franchise saved with id={}&quot;, ent.getId());</span>
+<span class="fc" id="L43">                       return mapper.map(ent, Franchise.class);</span>
+                   });
     }
 
     public Flux&lt;Franchise&gt; findAll() {
-<span class="fc" id="L44">        return repo.findAll()</span>
-<span class="fc" id="L45">                   .map(ent -&gt; mapper.map(ent, Franchise.class));</span>
+<span class="fc" id="L48">        log.debug(&quot;Retrieving all franchises&quot;);</span>
+<span class="fc" id="L49">        return repo.findAll()</span>
+<span class="fc" id="L50">                   .map(ent -&gt; mapper.map(ent, Franchise.class))</span>
+<span class="fc" id="L51">                   .doOnComplete(() -&gt; log.debug(&quot;Completed retrieval of all franchises&quot;));</span>
     }
 
     public Mono&lt;Franchise&gt; findById(String id) {
-<span class="fc" id="L49">        return repo.findById(id)</span>
-<span class="fc" id="L50">                   .map(ent -&gt; mapper.map(ent, Franchise.class));</span>
+<span class="fc" id="L55">        log.debug(&quot;Finding franchise by id={}&quot;, id);</span>
+<span class="fc" id="L56">        return repo.findById(id)</span>
+<span class="fc" id="L57">                   .map(ent -&gt; mapper.map(ent, Franchise.class))</span>
+<span class="pc" id="L58">                   .doOnError(e -&gt; log.warn(&quot;Error finding franchise {}: {}&quot;, id, e.getMessage()));</span>
     }
 
     public Mono&lt;Franchise&gt; addBranch(String franchiseId, Branch branch) {
-<span class="fc" id="L54">        return repo.findById(franchiseId)</span>
-<span class="fc" id="L55">                .switchIfEmpty(Mono.error( new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
-<span class="fc" id="L56">                .map(ent -&gt; { // I mutate the entity</span>
-<span class="pc bpc" id="L57" title="1 of 2 branches missed.">                        if (ent.getBranches() == null) ent.setBranches(new ArrayList&lt;&gt;());</span>
-<span class="fc" id="L58">                        ent.getBranches().add(mapper.map(branch, BranchEntity.class));</span>
-<span class="fc" id="L59">                        return ent;</span>
-                })
-<span class="fc" id="L61">                .flatMap(repo::save)</span>
-<span class="fc" id="L62">                .map(e -&gt; mapper.map(e, Franchise.class));</span>
-    }
-
-    public Mono&lt;Franchise&gt; addProduct(String franchiseId,
-                                  String branchId,
-                                  Product product) {
-
-<span class="fc" id="L69">        return repo.findById(franchiseId)</span>
-<span class="fc" id="L70">            .switchIfEmpty(Mono.error(</span>
-                new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))
-<span class="fc" id="L72">            .map(ent -&gt; {</span>
-                // find a branch
-<span class="fc" id="L74">                BranchEntity branch = ent.getBranches().stream()</span>
-<span class="fc" id="L75">                    .filter(b -&gt; b.getId().equals(branchId))</span>
-<span class="fc" id="L76">                    .findFirst()</span>
-<span class="fc" id="L77">                    .orElseThrow(() -&gt; new ResponseStatusException(</span>
-                            HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));
-
-                // initialize product list if null is present
-<span class="pc bpc" id="L81" title="1 of 2 branches missed.">                if (branch.getProducts() == null) branch.setProducts(new ArrayList&lt;&gt;());</span>
-
-                // add mapped product
-<span class="fc" id="L84">                branch.getProducts().add(mapper.map(product, ProductEntity.class));</span>
-<span class="fc" id="L85">                return ent;</span>
+<span class="fc" id="L62">        log.debug(&quot;Adding branch {} to franchise {}&quot;, branch.getName(), franchiseId);</span>
+<span class="fc" id="L63">        return repo.findById(franchiseId)</span>
+<span class="fc" id="L64">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L65">            .map(ent -&gt; { // I mutate the entity</span>
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">                if (ent.getBranches() == null) {</span>
+<span class="nc" id="L67">                    ent.setBranches(new ArrayList&lt;&gt;());</span>
+                }
+<span class="fc" id="L69">                ent.getBranches().add(mapper.map(branch, BranchEntity.class));</span>
+<span class="fc" id="L70">                log.debug(&quot;Branch {} added to franchise {}&quot;, branch.getName(), franchiseId);</span>
+<span class="fc" id="L71">                return ent;</span>
             })
-<span class="fc" id="L87">            .flatMap(repo::save)                     // save to Mongo</span>
-<span class="fc" id="L88">            .map(saved -&gt; mapper.map(saved, Franchise.class));</span>
+<span class="fc" id="L73">            .flatMap(repo::save)</span>
+<span class="fc" id="L74">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
     }
 
-    public Mono&lt;Franchise&gt; updateStock(String fid,
-                                   String bid,
-                                   String pid,
-                                   int newStock) {
+    public Mono&lt;Franchise&gt; addProduct(String franchiseId, String branchId, Product product) {
+<span class="fc" id="L78">        log.debug(&quot;Adding product {} to branch {} of franchise {}&quot;, product.getName(), branchId, franchiseId);</span>
+<span class="fc" id="L79">        return repo.findById(franchiseId)</span>
+<span class="fc" id="L80">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L81">            .map(ent -&gt; {</span>
+<span class="fc" id="L82">                BranchEntity branch = ent.getBranches().stream() // find a branch</span>
+<span class="fc" id="L83">                    .filter(b -&gt; b.getId().equals(branchId))</span>
+<span class="fc" id="L84">                    .findFirst()</span>
+<span class="fc" id="L85">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">                if (branch.getProducts() == null) { // initialize product list if null is present</span>
+<span class="nc" id="L87">                    branch.setProducts(new ArrayList&lt;&gt;());</span>
+                }
+<span class="fc" id="L89">                branch.getProducts().add(mapper.map(product, ProductEntity.class)); // add mapped product</span>
+<span class="fc" id="L90">                log.debug(&quot;Product {} added to branch {}&quot;, product.getName(), branchId);</span>
+<span class="fc" id="L91">                return ent;</span>
+            })
+<span class="fc" id="L93">            .flatMap(repo::save) // save to Mongo</span>
+<span class="fc" id="L94">            .map(saved -&gt; mapper.map(saved, Franchise.class));</span>
+    }
 
-<span class="fc" id="L96">        return repo.findById(fid)</span>
-<span class="fc" id="L97">            .switchIfEmpty(Mono.error(</span>
-                new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))
-<span class="fc" id="L99">            .map(ent -&gt; {</span>
+    public Mono&lt;Franchise&gt; updateStock(String fid, String bid, String pid, int newStock) {
+<span class="fc" id="L98">        log.debug(&quot;Updating stock for product {} in branch {} of franchise {} to {}&quot;, pid, bid, fid, newStock);</span>
+<span class="fc" id="L99">        return repo.findById(fid)</span>
+<span class="fc" id="L100">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L101">            .map(ent -&gt; {</span>
                 // find the branch
-<span class="fc" id="L101">                BranchEntity branch = ent.getBranches().stream()</span>
-<span class="fc" id="L102">                    .filter(b -&gt; b.getId().equals(bid))</span>
-<span class="fc" id="L103">                    .findFirst()</span>
-<span class="fc" id="L104">                    .orElseThrow(() -&gt; new ResponseStatusException(</span>
-                            HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));
-
+<span class="fc" id="L103">                BranchEntity branch = ent.getBranches().stream()</span>
+<span class="fc" id="L104">                    .filter(b -&gt; b.getId().equals(bid))</span>
+<span class="fc" id="L105">                    .findFirst()</span>
+<span class="fc" id="L106">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
                 // search for the product
-<span class="fc" id="L108">                ProductEntity prod = branch.getProducts().stream()</span>
+<span class="fc" id="L108">                    ProductEntity prod = branch.getProducts().stream()</span>
 <span class="fc" id="L109">                    .filter(p -&gt; p.getId().equals(pid))</span>
 <span class="fc" id="L110">                    .findFirst()</span>
-<span class="fc" id="L111">                    .orElseThrow(() -&gt; new ResponseStatusException(</span>
-                            HttpStatus.NOT_FOUND, &quot;Product not found&quot;));
-
-                // update stock
-<span class="fc" id="L115">                prod.setStock(newStock);</span>
-<span class="fc" id="L116">                return ent;                 // we return the modified entity</span>
+<span class="fc" id="L111">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Product not found&quot;));</span>
+<span class="fc" id="L112">                prod.setStock(newStock);</span>
+<span class="fc" id="L113">                log.debug(&quot;Stock for product {} updated to {}&quot;, pid, newStock);</span>
+<span class="fc" id="L114">                return ent;</span>
             })
-<span class="fc" id="L118">            .flatMap(repo::save)            // we persist in Mongo</span>
-<span class="fc" id="L119">            .map(saved -&gt; mapper.map(saved, Franchise.class));</span>
+<span class="fc" id="L116">            .flatMap(repo::save)</span>
+<span class="fc" id="L117">            .map(saved -&gt; mapper.map(saved, Franchise.class));</span>
     }
 
-
-    public Mono&lt;Void&gt; deleteProduct(String fid,
-                                String bid,
-                                String pid) {
-
-<span class="fc" id="L127">        return repo.findById(fid)</span>
-<span class="fc" id="L128">            .switchIfEmpty(Mono.error(</span>
-                new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))
-<span class="fc" id="L130">            .flatMap(ent -&gt; {</span>
-                // find the branch
-<span class="fc" id="L132">                BranchEntity branch = ent.getBranches().stream()</span>
-<span class="fc" id="L133">                    .filter(b -&gt; b.getId().equals(bid))</span>
-<span class="fc" id="L134">                    .findFirst()</span>
-<span class="fc" id="L135">                    .orElseThrow(() -&gt; new ResponseStatusException(</span>
-                            HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));
-
-                // delete the product 
-<span class="fc" id="L139">                boolean removed = branch.getProducts().removeIf(p -&gt; p.getId().equals(pid));</span>
-<span class="fc bfc" id="L140" title="All 2 branches covered.">                if (!removed) {</span>
-<span class="fc" id="L141">                    throw new ResponseStatusException(</span>
-                            HttpStatus.NOT_FOUND, &quot;Product not found&quot;);
+    public Mono&lt;Void&gt; deleteProduct(String fid, String bid, String pid) {
+<span class="fc" id="L121">        log.debug(&quot;Deleting product {} from branch {} of franchise {}&quot;, pid, bid, fid);</span>
+<span class="fc" id="L122">        return repo.findById(fid)</span>
+<span class="fc" id="L123">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L124">            .flatMap(ent -&gt; {</span>
+<span class="fc" id="L125">                BranchEntity branch = ent.getBranches().stream()</span>
+<span class="fc" id="L126">                    .filter(b -&gt; b.getId().equals(bid))</span>
+<span class="fc" id="L127">                    .findFirst()</span>
+<span class="fc" id="L128">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
+<span class="fc" id="L129">                boolean removed = branch.getProducts().removeIf(p -&gt; p.getId().equals(pid));</span>
+<span class="fc bfc" id="L130" title="All 2 branches covered.">                if (!removed) {</span>
+<span class="fc" id="L131">                    log.warn(&quot;Product {} not found in branch {}&quot;, pid, bid);</span>
+<span class="fc" id="L132">                    throw new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Product not found&quot;);</span>
                 }
-<span class="fc" id="L144">                return repo.save(ent).then();   </span>
+<span class="fc" id="L134">                log.debug(&quot;Product {} removed from branch {}&quot;, pid, bid);</span>
+<span class="fc" id="L135">                return repo.save(ent).then();</span>
             });
     }
-
 
     public Flux&lt;ProductStockDto&gt; topStockByBranch(String fid) {
-
-<span class="fc" id="L151">        return repo.findById(fid)</span>
-<span class="fc" id="L152">            .switchIfEmpty(Mono.error(</span>
-                new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))
-<span class="fc" id="L154">            .flatMapMany(ent -&gt; Flux.fromIterable(ent.getBranches()))</span>
-<span class="pc bpc" id="L155" title="2 of 4 branches missed.">            .filter(br -&gt; br.getProducts() != null &amp;&amp; !br.getProducts().isEmpty())</span>
-<span class="fc" id="L156">            .map(br -&gt; {</span>
-                // Get the product with the most stock in the branch
-<span class="fc" id="L158">                ProductEntity top = br.getProducts().stream()</span>
-<span class="fc" id="L159">                    .max(Comparator.comparingInt(ProductEntity::getStock))</span>
-<span class="fc" id="L160">                    .orElseThrow();   // never null by the previous filter</span>
-
-<span class="fc" id="L162">                return new ProductStockDto(</span>
-<span class="fc" id="L163">                        top.getId(),</span>
-<span class="fc" id="L164">                        top.getName(),</span>
-<span class="fc" id="L165">                        br.getId(),</span>
-<span class="fc" id="L166">                        br.getName(),</span>
-<span class="fc" id="L167">                        top.getStock());</span>
+<span class="fc" id="L140">        log.debug(&quot;Getting top stock by branch for franchise {}&quot;, fid);</span>
+<span class="fc" id="L141">        return repo.findById(fid)</span>
+<span class="fc" id="L142">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L143">            .flatMapMany(ent -&gt; Flux.fromIterable(ent.getBranches()))</span>
+<span class="pc bpc" id="L144" title="2 of 4 branches missed.">            .filter(br -&gt; br.getProducts() != null &amp;&amp; !br.getProducts().isEmpty())</span>
+<span class="fc" id="L145">            .map(br -&gt; {</span>
+<span class="fc" id="L146">                ProductEntity top = br.getProducts().stream()</span>
+<span class="fc" id="L147">                    .max(Comparator.comparingInt(ProductEntity::getStock))</span>
+<span class="fc" id="L148">                    .orElseThrow();</span>
+<span class="fc" id="L149">                return new ProductStockDto(</span>
+<span class="fc" id="L150">                    top.getId(), top.getName(), br.getId(), br.getName(), top.getStock()</span>
+                );
             });
     }
-
 
     // Rename franchise
     public Mono&lt;Franchise&gt; renameFranchise(String fid, String newName) {
-<span class="fc" id="L174">        return repo.findById(fid)</span>
-<span class="fc" id="L175">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
-<span class="fc" id="L176">            .map(ent -&gt; { ent.setName(newName); return ent; })</span>
-<span class="fc" id="L177">            .flatMap(repo::save)</span>
-<span class="fc" id="L178">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
+<span class="fc" id="L157">        log.debug(&quot;Renaming franchise {} to {}&quot;, fid, newName);</span>
+<span class="fc" id="L158">        return repo.findById(fid)</span>
+<span class="fc" id="L159">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L160">            .map(ent -&gt; {</span>
+<span class="fc" id="L161">                ent.setName(newName);</span>
+<span class="fc" id="L162">                return ent;</span>
+            })
+<span class="fc" id="L164">            .flatMap(repo::save)</span>
+<span class="fc" id="L165">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
     }
 
     // Rename branch
     public Mono&lt;Franchise&gt; renameBranch(String fid, String bid, String newName) {
-<span class="fc" id="L183">        return repo.findById(fid)</span>
-<span class="fc" id="L184">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
-<span class="fc" id="L185">            .map(ent -&gt; {</span>
-<span class="fc" id="L186">                BranchEntity br = ent.getBranches().stream()</span>
-<span class="fc" id="L187">                    .filter(b -&gt; b.getId().equals(bid))</span>
-<span class="fc" id="L188">                    .findFirst()</span>
-<span class="fc" id="L189">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
-<span class="fc" id="L190">                br.setName(newName);</span>
-<span class="fc" id="L191">                return ent;</span>
+<span class="fc" id="L170">        log.debug(&quot;Renaming branch {} in franchise {} to {}&quot;, bid, fid, newName);</span>
+<span class="fc" id="L171">        return repo.findById(fid)</span>
+<span class="fc" id="L172">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L173">            .map(ent -&gt; {</span>
+<span class="fc" id="L174">                BranchEntity br = ent.getBranches().stream()</span>
+<span class="fc" id="L175">                    .filter(b -&gt; b.getId().equals(bid))</span>
+<span class="fc" id="L176">                    .findFirst()</span>
+<span class="fc" id="L177">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
+<span class="fc" id="L178">                br.setName(newName);</span>
+<span class="fc" id="L179">                return ent;</span>
             })
-<span class="fc" id="L193">            .flatMap(repo::save)</span>
-<span class="fc" id="L194">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
+<span class="fc" id="L181">            .flatMap(repo::save)</span>
+<span class="fc" id="L182">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
     }
-
+    
     // Rename product
     public Mono&lt;Franchise&gt; renameProduct(String fid, String bid, String pid, String newName) {
-<span class="fc" id="L199">        return repo.findById(fid)</span>
-<span class="fc" id="L200">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
-<span class="fc" id="L201">            .map(ent -&gt; {</span>
-<span class="fc" id="L202">                BranchEntity br = ent.getBranches().stream()</span>
-<span class="fc" id="L203">                    .filter(b -&gt; b.getId().equals(bid))</span>
-<span class="fc" id="L204">                    .findFirst()</span>
-<span class="fc" id="L205">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
-<span class="fc" id="L206">                ProductEntity pr = br.getProducts().stream()</span>
-<span class="fc" id="L207">                    .filter(p -&gt; p.getId().equals(pid))</span>
-<span class="fc" id="L208">                    .findFirst()</span>
-<span class="fc" id="L209">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Product not found&quot;));</span>
-<span class="fc" id="L210">                pr.setName(newName);</span>
-<span class="fc" id="L211">                return ent;</span>
+<span class="fc" id="L187">        log.debug(&quot;Renaming product {} in branch {} of franchise {} to {}&quot;, pid, bid, fid, newName);</span>
+<span class="fc" id="L188">        return repo.findById(fid)</span>
+<span class="fc" id="L189">            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)))</span>
+<span class="fc" id="L190">            .map(ent -&gt; {</span>
+<span class="fc" id="L191">                BranchEntity br = ent.getBranches().stream()</span>
+<span class="fc" id="L192">                    .filter(b -&gt; b.getId().equals(bid))</span>
+<span class="fc" id="L193">                    .findFirst()</span>
+<span class="fc" id="L194">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Branch not found&quot;));</span>
+<span class="fc" id="L195">                ProductEntity pr = br.getProducts().stream()</span>
+<span class="fc" id="L196">                    .filter(p -&gt; p.getId().equals(pid))</span>
+<span class="fc" id="L197">                    .findFirst()</span>
+<span class="fc" id="L198">                    .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Product not found&quot;));</span>
+<span class="fc" id="L199">                pr.setName(newName);</span>
+<span class="fc" id="L200">                return ent;</span>
             })
-<span class="fc" id="L213">            .flatMap(repo::save)</span>
-<span class="fc" id="L214">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
+<span class="fc" id="L202">            .flatMap(repo::save)</span>
+<span class="fc" id="L203">            .map(e -&gt; mapper.map(e, Franchise.class));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

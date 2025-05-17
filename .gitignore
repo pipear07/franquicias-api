@@ -4,8 +4,6 @@ cat > .gitignore <<'EOF'
 .idea/
 *.iml
 *.class
-# Logs
-*.log
 # OS
 .DS_Store
 Thumbs.db

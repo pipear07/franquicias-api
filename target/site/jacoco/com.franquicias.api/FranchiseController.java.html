@@ -11,88 +11,105 @@ import com.franquicias.domain.model.Product;
 import com.franquicias.domain.service.FranchiseService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper; // It is a small library that is responsible for copying data from one object to another automatically
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import org.modelmapper.ModelMapper;  // It is a small library that is responsible for copying data from one object to another automatically
 
 @RestController
 @RequestMapping(&quot;/franchises&quot;)
 @RequiredArgsConstructor
 public class FranchiseController {
 
+<span class="fc" id="L28">    private static final Logger log = LoggerFactory.getLogger(FranchiseController.class);</span>
+
     private final FranchiseService service;
     private final ModelMapper mapper;
 
     @GetMapping
     public Flux&lt;Franchise&gt; list() {
-<span class="fc" id="L32">        return service.findAll();</span>
+<span class="fc" id="L35">        log.info(&quot;Received GET /franchises&quot;);</span>
+<span class="fc" id="L36">        return service.findAll()</span>
+<span class="fc" id="L37">                      .doOnNext(f -&gt; log.debug(&quot;Returning franchise {}&quot;, f.getId()));</span>
     }
 
-   @GetMapping(&quot;/{id}&quot;)
+    @GetMapping(&quot;/{id}&quot;)
     public Mono&lt;Franchise&gt; get(@PathVariable String id) {
-<span class="fc" id="L37">        return service.findById(id)</span>
-<span class="fc" id="L38">                      .switchIfEmpty(Mono.error(</span>
+<span class="fc" id="L42">        log.info(&quot;Received GET /franchises/{}&quot;, id);</span>
+<span class="fc" id="L43">        return service.findById(id)</span>
+<span class="fc" id="L44">                      .switchIfEmpty(Mono.error(</span>
                           new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Franchise not found&quot;)
-                      ));
+                      ))
+<span class="fc" id="L47">                      .doOnError(ex -&gt; log.warn(&quot;Franchise {} not found&quot;, id));</span>
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Mono&lt;Franchise&gt; create(@Valid @RequestBody Franchise dto) {
-<span class="fc" id="L46">        return service.save(dto);</span>
+<span class="fc" id="L53">        log.info(&quot;Received POST /franchises with body {}&quot;, dto);</span>
+<span class="fc" id="L54">        return service.save(dto)</span>
+<span class="fc" id="L55">                      .doOnSuccess(f -&gt; log.info(&quot;Created franchise {}&quot;, f.getId()));</span>
     }
 
     @PostMapping(&quot;/{id}/branches&quot;)
     public Mono&lt;Franchise&gt; addBranch(@PathVariable String id,
-                                    @Valid @RequestBody AddBranchRequest req) {
-<span class="fc" id="L52">        Branch branch = mapper.map(req, Branch.class);</span>
-<span class="fc" id="L53">        return service.addBranch(id, branch);</span>
+                                     @Valid @RequestBody AddBranchRequest req) {
+<span class="fc" id="L61">        log.info(&quot;Received POST /franchises/{}/branches with body {}&quot;, id, req);</span>
+<span class="fc" id="L62">        Branch branch = mapper.map(req, Branch.class);</span>
+<span class="fc" id="L63">        return service.addBranch(id, branch)</span>
+<span class="fc" id="L64">                      .doOnSuccess(f -&gt; log.info(&quot;Added branch {} to franchise {}&quot;, branch.getId(), id));</span>
     }
 
     @PostMapping(&quot;/{fid}/branches/{bid}/products&quot;)
     @ResponseStatus(HttpStatus.CREATED)
     public Mono&lt;Franchise&gt; addProduct(@PathVariable String fid,
-                                    @PathVariable String bid,
-                                    @Valid @RequestBody AddProductRequest body) {
-
-<span class="fc" id="L62">        Product product = mapper.map(body, Product.class);</span>
-<span class="fc" id="L63">        return service.addProduct(fid, bid, product);</span>
+                                       @PathVariable String bid,
+                                       @Valid @RequestBody AddProductRequest body) {
+<span class="fc" id="L72">        log.info(&quot;Received POST /franchises/{}/branches/{}/products with body {}&quot;, fid, bid, body);</span>
+<span class="fc" id="L73">        Product product = mapper.map(body, Product.class);</span>
+<span class="fc" id="L74">        return service.addProduct(fid, bid, product)</span>
+<span class="fc" id="L75">                      .doOnSuccess(f -&gt; log.info(&quot;Added product {} to branch {} of franchise {}&quot;, product.getId(), bid, fid));</span>
     }
 
     @PatchMapping(&quot;/{fid}/branches/{bid}/products/{pid}/stock&quot;)
     public Mono&lt;Franchise&gt; updateStock(@PathVariable String fid,
-                                    @PathVariable String bid,
-                                    @PathVariable String pid,
-                                    @Valid @RequestBody UpdateStockRequest body) {
-
-<span class="fc" id="L72">        return service.updateStock(fid, bid, pid, body.getStock());</span>
+                                       @PathVariable String bid,
+                                       @PathVariable String pid,
+                                       @Valid @RequestBody UpdateStockRequest body) {
+<span class="fc" id="L83">        log.info(&quot;Received PATCH /franchises/{}/branches/{}/products/{}/stock with body {}&quot;, fid, bid, pid, body);</span>
+<span class="fc" id="L84">        return service.updateStock(fid, bid, pid, body.getStock())</span>
+<span class="fc" id="L85">                      .doOnSuccess(f -&gt; log.info(&quot;Updated stock for product {} to {}&quot;, pid, body.getStock()));</span>
     }
 
     @DeleteMapping(&quot;/{fid}/branches/{bid}/products/{pid}&quot;)
-    @ResponseStatus(HttpStatus.NO_CONTENT)      
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Mono&lt;Void&gt; deleteProduct(@PathVariable String fid,
                                     @PathVariable String bid,
                                     @PathVariable String pid) {
-<span class="fc" id="L80">        return service.deleteProduct(fid, bid, pid);</span>
+<span class="fc" id="L93">        log.info(&quot;Received DELETE /franchises/{}/branches/{}/products/{}&quot;, fid, bid, pid);</span>
+<span class="fc" id="L94">        return service.deleteProduct(fid, bid, pid)</span>
+<span class="fc" id="L95">                      .doOnSuccess(v -&gt; log.info(&quot;Deleted product {} from branch {} of franchise {}&quot;, pid, bid, fid));</span>
     }
-
 
     @GetMapping(&quot;/{fid}/top-stock&quot;)
     public Flux&lt;ProductStockDto&gt; topStockByBranch(@PathVariable String fid) {
-<span class="fc" id="L86">        return service.topStockByBranch(fid);</span>
+<span class="fc" id="L100">        log.info(&quot;Received GET /franchises/{}/top-stock&quot;, fid);</span>
+<span class="fc" id="L101">        return service.topStockByBranch(fid)</span>
+<span class="fc" id="L102">                      .doOnNext(dto -&gt; log.debug(&quot;Top stock for branch {}: {}&quot;, dto.getBranchId(), dto.getProductId()));</span>
     }
-
 
     // Rename franchise
     @PatchMapping(&quot;/{fid}&quot;)
     public Mono&lt;Franchise&gt; renameFranchise(
         @PathVariable String fid,
         @Valid @RequestBody RenameRequest body) {
-<span class="fc" id="L95">    return service.renameFranchise(fid, body.getName());</span>
+<span class="fc" id="L110">        log.info(&quot;Received PATCH /franchises/{} with rename body {}&quot;, fid, body);</span>
+<span class="fc" id="L111">        return service.renameFranchise(fid, body.getName())</span>
+<span class="fc" id="L112">                      .doOnSuccess(f -&gt; log.info(&quot;Renamed franchise {} to {}&quot;, fid, body.getName()));</span>
     }
 
     // Rename branch
@@ -101,7 +118,9 @@ public class FranchiseController {
         @PathVariable String fid,
         @PathVariable String bid,
         @Valid @RequestBody RenameRequest body) {
-<span class="fc" id="L104">    return service.renameBranch(fid, bid, body.getName());</span>
+<span class="fc" id="L121">        log.info(&quot;Received PATCH /franchises/{}/branches/{} with rename body {}&quot;, fid, bid, body);</span>
+<span class="fc" id="L122">        return service.renameBranch(fid, bid, body.getName())</span>
+<span class="fc" id="L123">                      .doOnSuccess(f -&gt; log.info(&quot;Renamed branch {} in franchise {} to {}&quot;, bid, fid, body.getName()));</span>
     }
 
     // Rename product
@@ -111,7 +130,9 @@ public class FranchiseController {
         @PathVariable String bid,
         @PathVariable String pid,
         @Valid @RequestBody RenameRequest body) {
-<span class="fc" id="L114">    return service.renameProduct(fid, bid, pid, body.getName());</span>
+<span class="fc" id="L133">        log.info(&quot;Received PATCH /franchises/{}/branches/{}/products/{} with rename body {}&quot;, fid, bid, pid, body);</span>
+<span class="fc" id="L134">        return service.renameProduct(fid, bid, pid, body.getName())</span>
+<span class="fc" id="L135">                      .doOnSuccess(f -&gt; log.info(&quot;Renamed product {} in branch {} of franchise {} to {}&quot;, pid, bid, fid, body.getName()));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

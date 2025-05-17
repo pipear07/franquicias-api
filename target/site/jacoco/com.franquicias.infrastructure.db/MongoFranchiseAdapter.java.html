@@ -4,6 +4,8 @@ import com.franquicias.domain.model.Franchise;
 import com.franquicias.domain.repository.FranchiseRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -11,41 +13,55 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Adapter for persistence in reactive MongoDB
+ */
 @Component
 @RequiredArgsConstructor
 public class MongoFranchiseAdapter implements FranchiseRepository {
+
+<span class="fc" id="L23">    private static final Logger log = LoggerFactory.getLogger(MongoFranchiseAdapter.class);</span>
 
     private final ReactiveMongoTemplate template;
     private final ModelMapper mapper;
 
     @Override
     public Mono&lt;Franchise&gt; save(Franchise franchise) {
-        // Convertimos el dominio a entidad
-<span class="fc" id="L24">        var entity = mapper.map(franchise, FranchiseEntity.class);</span>
-<span class="fc" id="L25">        return template.save(entity)</span>
-                       // Convertimos la entidad guardada de vuelta a dominio
-<span class="fc" id="L27">                       .map(e -&gt; mapper.map(e, Franchise.class));</span>
+<span class="fc" id="L30">        log.debug(&quot;Saving franchise to Mongo: {}&quot;, franchise.getId());</span>
+<span class="fc" id="L31">        var entity = mapper.map(franchise, FranchiseEntity.class);</span>
+<span class="fc" id="L32">        return template.save(entity)</span>
+<span class="fc" id="L33">                       .doOnSuccess(e -&gt; log.info(&quot;Franchise saved to Mongo: {}&quot;, e.getId()))</span>
+<span class="pc" id="L34">                       .doOnError(err -&gt; log.error(&quot;Error saving franchise {}: {}&quot;, franchise.getId(), err.getMessage()))</span>
+<span class="fc" id="L35">                       .map(e -&gt; mapper.map(e, Franchise.class));</span>
     }
 
     @Override
     public Mono&lt;Franchise&gt; findById(String id) {
-<span class="fc" id="L32">        return template.findById(id, FranchiseEntity.class)</span>
-<span class="fc" id="L33">                       .map(e -&gt; mapper.map(e, Franchise.class));</span>
+<span class="fc" id="L40">        log.debug(&quot;Finding franchise by id in Mongo: {}&quot;, id);</span>
+<span class="fc" id="L41">        return template.findById(id, FranchiseEntity.class)</span>
+<span class="fc" id="L42">                       .doOnNext(e -&gt; log.info(&quot;Franchise found in Mongo: {}&quot;, e.getId()))</span>
+<span class="pc" id="L43">                       .doOnError(err -&gt; log.error(&quot;Error finding franchise {}: {}&quot;, id, err.getMessage()))</span>
+<span class="fc" id="L44">                       .map(e -&gt; mapper.map(e, Franchise.class));</span>
     }
 
     @Override
     public Flux&lt;Franchise&gt; findAll() {
-<span class="fc" id="L38">        return template.findAll(FranchiseEntity.class)</span>
-<span class="fc" id="L39">                       .map(e -&gt; mapper.map(e, Franchise.class));</span>
+<span class="fc" id="L49">        log.debug(&quot;Retrieving all franchises from Mongo&quot;);</span>
+<span class="fc" id="L50">        return template.findAll(FranchiseEntity.class)</span>
+<span class="fc" id="L51">                       .doOnNext(e -&gt; log.debug(&quot;Found franchise in Mongo: {}&quot;, e.getId()))</span>
+<span class="fc" id="L52">                       .map(e -&gt; mapper.map(e, Franchise.class))</span>
+<span class="fc" id="L53">                       .doOnComplete(() -&gt; log.info(&quot;Completed retrieval of all franchises from Mongo&quot;));</span>
     }
 
     @Override
     public Mono&lt;Void&gt; deleteById(String id) {
-<span class="nc" id="L44">        return template.remove(</span>
-<span class="nc" id="L45">                   Query.query(Criteria.where(&quot;_id&quot;).is(id)),</span>
-                   FranchiseEntity.class
-               )
-<span class="nc" id="L48">               .then();</span>
+<span class="nc" id="L58">        log.debug(&quot;Deleting franchise in Mongo by id: {}&quot;, id);</span>
+<span class="nc" id="L59">        return template.remove(</span>
+<span class="nc" id="L60">                   Query.query(Criteria.where(&quot;_id&quot;).is(id)),</span>
+                   FranchiseEntity.class)
+<span class="nc" id="L62">               .doOnSuccess(res -&gt; log.info(&quot;Deleted franchise {} from Mongo, deletedCount={}&quot;, id, res.getDeletedCount()))</span>
+<span class="nc" id="L63">               .doOnError(err -&gt; log.error(&quot;Error deleting franchise {}: {}&quot;, id, err.getMessage()))</span>
+<span class="nc" id="L64">               .then();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
