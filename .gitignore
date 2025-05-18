@@ -8,3 +8,8 @@ cat > .gitignore <<'EOF'
 .DS_Store
 Thumbs.db
 EOF
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -1,12 +1,11 @@
 {
   "AWSEBDockerrunVersion": 1,
   "Image": {
-    "Name": "pipear07/franquicias-api:latest",
+    "Name": "tu-registro/tu-imagen:tag",
     "Update": "true"
   },
   "Ports": [
-    {
-      "ContainerPort": "8080"
-    }
-  ]
+    { "ContainerPort": "8080" }
+  ],
+  "Logging": "/var/log/nginx"
 }

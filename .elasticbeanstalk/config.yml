@@ -1,8 +1,8 @@
 branch-defaults:
-  default:
-    environment: franquicias-vpc-env
+  main:
+    environment: franquicias-vpc-single
 environment-defaults:
-  franquicias-vpc-env:
+  franquicias-vpc-single:
     branch: null
     repository: null
 global:
@@ -15,5 +15,5 @@ global:
   platform_name: null
   platform_version: null
   profile: null
-  sc: null
+  sc: git
   workspace_type: Application
