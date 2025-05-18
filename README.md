@@ -70,7 +70,32 @@ Esta aplicacion gestiona una colección de **franquicias**, cada una con multipl
 
 ---
 
-## Ejecución con Docker Compose
+## Comandos Docker
+
+- Construir el JAR:
+   ```bash
+   mvn clean package -DskipTests
+   ```
+- Construir imagen:
+  ```bash
+  docker compose build api
+  ```
+- Levantar contenedores:
+  ```bash
+  docker compose up -d
+  ```
+- Ver logs:
+  ```bash
+  docker compose logs -f
+  ```
+- Ver logs:
+  ```bash
+  Swagger UI: `http://localhost:8080/swagger-ui.html`
+  ```
+  
+![Docker Corriendo](src/docs/img/Docker_Run.png)
+
+---
 
 1. Construir el JAR:
    ```bash
@@ -120,25 +145,6 @@ Todos los endpoints devuelven y reciben **JSON**.
    Comando: explorer.exe .\target\site\jacoco\index.html
 
 ![Pruebas Unitarias con Jacoco](src/docs/img/Unit_test_jacoco.png)
----
-
-## Comandos Docker
-
-- Construir imagen:
-  ```bash
-  docker compose build api
-  ```
-- Levantar contenedores:
-  ```bash
-  docker compose up -d
-  ```
-- Ver logs:
-  ```bash
-  docker compose logs -f
-  ```
-
-![Docker Corriendo](src/docs/img/Docker_Run.png)
-
 ---
 
 ## Versionado y despliegue
