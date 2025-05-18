@@ -34,7 +34,7 @@ Esta aplicacion gestiona una colección de **franquicias**, cada una con multipl
    - Bean global configurado para convertir entidades Mongo a modelos de dominio y viceversa.
 
 4. **Logging**:  
-   - Uso de `slf4j` a través de Lombok `@Slf4j` en servicios y controladores.
+   - Uso de `slf4j` a través de Lombok `@Slf4j` en servicios, controladores y adaptadores.
 
 5. **Validación**:  
    - Validaciones `@Valid` y `@NotBlank` en DTOs.  
@@ -98,28 +98,57 @@ Todos los endpoints devuelven y reciben **JSON**.
 | POST   | `/franchises/{fid}/branches`                           | Agregar sucursal a franquicia               |
 | POST   | `/franchises/{fid}/branches/{bid}/products`            | Agregar producto a sucursal                 |
 | DELETE | `/franchises/{fid}/branches/{bid}/products/{pid}`      | Eliminar producto de sucursal               |
-| PATCH  | `/franchises/{fid}/branches/{bid}/products/{pid}/stock`| Atualizar stock de producto                 |
-| GET    | `/franchises/{fid}/top-stock?limit={limit}`            | Top stock por franquicia                    |
+| PATCH  | `/franchises/{fid}/branches/{bid}/products/{pid}/stock`| Actualizar stock de producto                 |
+| GET    | `/franchises/{fid}/top-stock`                         | Top stock por franquicia                    |
 | PATCH  | `/franchises/{fid}`                                    | Renombrar franquicia                        |
 | PATCH  | `/franchises/{fid}/branches/{bid}`                     | Renombrar sucursal                          |
 | PATCH  | `/franchises/{fid}/branches/{bid}/products/{pid}`      | Renombrar producto                          |
 
 ---
-Se incluye un documento PDF sobre la ejecucion de cada uno de los endpoints en la ruta raiz llamada "DocumentacionPruebaNequi"
 
 ## Pruebas unitarias
 
-- Cobertura > 80% con **JUnit 5**, **Mockito** y **WebTestClient**.  
-- Se incluyen tests para escenarios felices y errores 404.
+- Ejecutar:
+  ```bash
+  mvn test
+  ```
+- Cobertura con JaCoCo:
+  ```bash
+  mvn jacoco:report
+  ```
+- Ver informe HTML en `target/site/jacoco/index.html`.
+   Comando: explorer.exe .\target\site\jacoco\index.html
+
+![Pruebas Unitarias con Jacoco](src/docs/img/Unit_test_jacoco.png)
+---
+
+## Comandos Docker
+
+- Construir imagen:
+  ```bash
+  docker compose build api
+  ```
+- Levantar contenedores:
+  ```bash
+  docker compose up -d
+  ```
+- Ver logs:
+  ```bash
+  docker compose logs -f
+  ```
+
+![Docker Corriendo](src/docs/img/Docker_Run.png)
 
 ---
 
 ## Versionado y despliegue
 
 - **v1.0**: Endpoints basicos.  
-- **v1.1-docker**: Empaquetado Docker.  
-- **v1.2-rename**: Endpoints PATCH rename.  
-- **v1.4-readme**: Documentación completa.
+- **v1.1-docker**: Empaquetado Docker
+- **v1.2-rename**: Endpoints PATCH rename  
+- **v1.4-readme**: Documentacion completa
+- **v1.5-readme**: Cobertura del 80% e informe JaCoCo incluido
+- **v1.6-readme**: MongoDb_Atlas
 
 ---
 
@@ -130,10 +159,11 @@ Se incluye un documento PDF sobre la ejecucion de cada uno de los endpoints en l
 3. **ModelMapper**: configurado como bean unico para centralizar mapeos de entidades a DTOs, evitando código boilerplate en servicios.  
 4. **Logging estructurado**: SLF4J y Logback permiten trazar el flujo Reactor (`onNext`, `onError`, `onComplete`) y diagnosticar fallos en producción.  
 5. **Validación y manejo de errores**: uso de `@Valid`, `ResponseStatusException` y operadores `switchIfEmpty` para devolver HTTP 4xx claros en lugar de 500 genericos.  
-6. **Contenedorización con Docker**: Dockerfile minimal y Docker Compose aseguran entornos reproducibles y facilitan despliegues en la nube.
+6. **Contenedorizacion con Docker**: Dockerfile minimal y Docker Compose aseguran entornos reproducibles y facilitan despliegues en la nube.
 
 ---
 
 Se incluye un documento PDF sobre la ejecucion de cada uno de los endpoints en la ruta raiz llamada "DocumentacionPruebaNequi"
 
 Para dudas de la prueba, contactarme a Andres Felipe Arevalo Moreno al correo de `pipear07@hotmail.com`.
+Para dudas, contáctame a `pipear07@hotmail.com`.
