@@ -54,7 +54,7 @@ Esta aplicacion gestiona una colección de **franquicias**, cada una con multipl
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/franquicias-api.git
+   git clone https://github.com/pipear07/franquicias-api.git
    cd franquicias-api
    ```
 
