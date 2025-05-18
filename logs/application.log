@@ -1,384 +1,421 @@
-2025-05-17 16:29:21.994 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-05-17 16:29:24.430 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 16:29:24.685 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:29:24.709 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to X
-2025-05-17 16:29:24.715 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:29:24.737 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:29:24.744 [main] DEBUG c.f.domain.service.FranchiseService - Stock for product P1 updated to 10
-2025-05-17 16:29:24.750 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 16:29:24.767 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to New
-2025-05-17 16:29:24.776 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to New
-2025-05-17 16:29:24.784 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 16:29:24.791 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 16:29:24.798 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to New
-2025-05-17 16:29:24.804 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=X
-2025-05-17 16:29:24.815 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 16:29:24.819 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:29:24.823 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 16:29:24.831 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 16:29:24.888 [main] DEBUG c.f.domain.service.FranchiseService - Branch S1 added to franchise F1
-2025-05-17 16:29:24.893 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 16:29:24.911 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:29:24.912 [main] WARN  c.f.domain.service.FranchiseService - Product P1 not found in branch B1
-2025-05-17 16:29:24.915 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=F1
-2025-05-17 16:29:24.922 [main] DEBUG c.f.domain.service.FranchiseService - Adding product Prod to branch B1 of franchise F1
-2025-05-17 16:29:24.927 [main] DEBUG c.f.domain.service.FranchiseService - Product Prod added to branch B1
-2025-05-17 16:29:24.931 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 16:29:24.935 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:29:24.936 [main] DEBUG c.f.domain.service.FranchiseService - Product P1 removed from branch B1
-2025-05-17 16:29:24.942 [main] DEBUG c.f.domain.service.FranchiseService - Saving franchise: Fr1
-2025-05-17 16:29:24.946 [main] DEBUG c.f.domain.service.FranchiseService - Franchise saved with id=F1
-2025-05-17 16:29:24.951 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 16:29:24.958 [main] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
-2025-05-17 16:29:24.965 [main] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
-2025-05-17 16:29:24.969 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:29:24.974 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:29:24.981 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 16:29:25.196 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.FranchiseControllerTest]: FranchiseControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 16:29:25.430 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.FranchiseControllerTest
-2025-05-17 16:29:26.163 [main] INFO  c.f.e.rest.FranchiseControllerTest - Starting FranchiseControllerTest using Java 21.0.7 with PID 31512 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:29:26.164 [main] DEBUG c.f.e.rest.FranchiseControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:29:26.165 [main] INFO  c.f.e.rest.FranchiseControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:29:27.366 [main] INFO  c.f.e.rest.FranchiseControllerTest - Started FranchiseControllerTest in 1.824 seconds (process running for 6.95)
-2025-05-17 16:29:27.947 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 16:29:27.957 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.HealthControllerTest
-2025-05-17 16:29:28.003 [main] INFO  c.f.e.rest.HealthControllerTest - Starting HealthControllerTest using Java 21.0.7 with PID 31512 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:29:28.003 [main] DEBUG c.f.e.rest.HealthControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:29:28.003 [main] INFO  c.f.e.rest.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:29:28.131 [main] INFO  c.f.e.rest.HealthControllerTest - Started HealthControllerTest in 0.172 seconds (process running for 7.716)
-2025-05-17 16:29:28.158 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.FranquiciasApiApplicationTests]: FranquiciasApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 16:29:28.167 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.FranquiciasApiApplicationTests
-2025-05-17 16:29:28.190 [main] INFO  c.f.FranquiciasApiApplicationTests - Starting FranquiciasApiApplicationTests using Java 21.0.7 with PID 31512 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:29:28.190 [main] DEBUG c.f.FranquiciasApiApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:29:28.191 [main] INFO  c.f.FranquiciasApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:29:28.621 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 16:29:28.664 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 16:29:29.273 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@53d519cb, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4119a22c, com.mongodb.Jep395RecordCodecProvider@455d5b33, com.mongodb.KotlinCodecProvider@1c7f3eae]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 16:29:29.434 [cluster-ClusterId{value='6828ffb97fa115649d8982ca', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=99698400, minRoundTripTimeNanos=0}
-2025-05-17 16:29:29.966 [main] INFO  c.f.FranquiciasApiApplicationTests - Started FranquiciasApiApplicationTests in 1.793 seconds (process running for 9.551)
-2025-05-17 16:29:30.003 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 31512 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:29:30.003 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:29:30.003 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:29:30.136 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 16:29:30.148 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 16:29:30.287 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@68a1f3dd, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4119a22c, com.mongodb.Jep395RecordCodecProvider@455d5b33, com.mongodb.KotlinCodecProvider@1c7f3eae]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 16:29:30.298 [cluster-ClusterId{value='6828ffba7fa115649d8982cb', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11644100, minRoundTripTimeNanos=0}
-2025-05-17 16:29:30.436 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
-2025-05-17 16:29:30.439 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 0.459 seconds (process running for 10.024)
-2025-05-17 16:29:33.073 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-17 16:29:33.078 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
-2025-05-17 16:29:59.148 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-05-17 16:30:01.508 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 16:30:01.809 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:30:01.828 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to X
-2025-05-17 16:30:01.836 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:30:01.863 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:30:01.872 [main] DEBUG c.f.domain.service.FranchiseService - Stock for product P1 updated to 10
-2025-05-17 16:30:01.879 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 16:30:01.895 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to New
-2025-05-17 16:30:01.901 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to New
-2025-05-17 16:30:01.910 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 16:30:01.915 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 16:30:01.922 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to New
-2025-05-17 16:30:01.931 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=X
-2025-05-17 16:30:01.943 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 16:30:01.949 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:30:01.951 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 16:30:01.960 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 16:30:02.020 [main] DEBUG c.f.domain.service.FranchiseService - Branch S1 added to franchise F1
-2025-05-17 16:30:02.025 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 16:30:02.040 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:30:02.041 [main] WARN  c.f.domain.service.FranchiseService - Product P1 not found in branch B1
-2025-05-17 16:30:02.047 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=F1
-2025-05-17 16:30:02.054 [main] DEBUG c.f.domain.service.FranchiseService - Adding product Prod to branch B1 of franchise F1
-2025-05-17 16:30:02.061 [main] DEBUG c.f.domain.service.FranchiseService - Product Prod added to branch B1
-2025-05-17 16:30:02.064 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 16:30:02.071 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 16:30:02.072 [main] DEBUG c.f.domain.service.FranchiseService - Product P1 removed from branch B1
-2025-05-17 16:30:02.080 [main] DEBUG c.f.domain.service.FranchiseService - Saving franchise: Fr1
-2025-05-17 16:30:02.084 [main] DEBUG c.f.domain.service.FranchiseService - Franchise saved with id=F1
-2025-05-17 16:30:02.089 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 16:30:02.093 [main] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
-2025-05-17 16:30:02.098 [main] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
-2025-05-17 16:30:02.101 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:30:02.106 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 16:30:02.110 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 16:30:02.358 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.FranchiseControllerTest]: FranchiseControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 16:30:02.691 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.FranchiseControllerTest
-2025-05-17 16:30:03.612 [main] INFO  c.f.e.rest.FranchiseControllerTest - Starting FranchiseControllerTest using Java 21.0.7 with PID 32404 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:30:03.613 [main] DEBUG c.f.e.rest.FranchiseControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:30:03.614 [main] INFO  c.f.e.rest.FranchiseControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:30:05.126 [main] INFO  c.f.e.rest.FranchiseControllerTest - Started FranchiseControllerTest in 2.258 seconds (process running for 7.605)
-2025-05-17 16:30:06.088 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 16:30:06.108 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.HealthControllerTest
-2025-05-17 16:30:06.141 [main] INFO  c.f.e.rest.HealthControllerTest - Starting HealthControllerTest using Java 21.0.7 with PID 32404 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:30:06.141 [main] DEBUG c.f.e.rest.HealthControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:30:06.142 [main] INFO  c.f.e.rest.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:30:06.322 [main] INFO  c.f.e.rest.HealthControllerTest - Started HealthControllerTest in 0.211 seconds (process running for 8.799)
-2025-05-17 16:30:06.370 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.FranquiciasApiApplicationTests]: FranquiciasApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 16:30:06.387 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.FranquiciasApiApplicationTests
-2025-05-17 16:30:06.425 [main] INFO  c.f.FranquiciasApiApplicationTests - Starting FranquiciasApiApplicationTests using Java 21.0.7 with PID 32404 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:30:06.425 [main] DEBUG c.f.FranquiciasApiApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:30:06.425 [main] INFO  c.f.FranquiciasApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:30:06.911 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 16:30:06.965 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 16:30:07.680 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@b412e77, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@48eb05e9, com.mongodb.Jep395RecordCodecProvider@10564688, com.mongodb.KotlinCodecProvider@24f48ca0]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 16:30:07.915 [cluster-ClusterId{value='6828ffdf72b80146a517176c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=135990600, minRoundTripTimeNanos=0}
-2025-05-17 16:30:08.607 [main] INFO  c.f.FranquiciasApiApplicationTests - Started FranquiciasApiApplicationTests in 2.208 seconds (process running for 11.085)
-2025-05-17 16:30:08.645 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 32404 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:30:08.645 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:30:08.645 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:30:08.786 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 16:30:08.796 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 16:30:08.939 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@6772f9c7, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@48eb05e9, com.mongodb.Jep395RecordCodecProvider@10564688, com.mongodb.KotlinCodecProvider@24f48ca0]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 16:30:08.950 [cluster-ClusterId{value='6828ffe072b80146a517176d', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10982200, minRoundTripTimeNanos=0}
-2025-05-17 16:30:09.116 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
-2025-05-17 16:30:09.118 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 0.494 seconds (process running for 11.596)
-2025-05-17 16:30:11.703 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-17 16:30:11.705 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
-2025-05-17 16:31:04.299 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-05-17 16:31:04.357 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 4440 (C:\Repos2\franquicias-api\target\classes started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 16:31:04.358 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 16:31:04.359 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 16:31:04.923 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 16:31:05.011 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 16:31:05.439 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@1c34365c, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@348137e8, com.mongodb.Jep395RecordCodecProvider@412c5e8b, com.mongodb.KotlinCodecProvider@637791d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 16:31:05.525 [cluster-ClusterId{value='68290019b016023bcfd5764e', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=42317400, minRoundTripTimeNanos=0}
-2025-05-17 16:31:06.001 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
-2025-05-17 16:31:06.012 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 1.948 seconds (process running for 2.39)
-2025-05-17 16:31:33.088 [reactor-http-nio-3] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 226 ms
-2025-05-17 16:32:11.274 [reactor-http-nio-3] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
-2025-05-17 16:32:11.652 [nioEventLoopGroup-3-3] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
-2025-05-17 16:42:47.286 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-17 16:42:47.290 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
-2025-05-17 17:03:04.359 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-05-17 17:03:06.747 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 17:03:06.983 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:07.008 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to X
-2025-05-17 17:03:07.017 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:07.039 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:07.048 [main] DEBUG c.f.domain.service.FranchiseService - Stock for product P1 updated to 10
-2025-05-17 17:03:07.054 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 17:03:07.068 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to New
-2025-05-17 17:03:07.075 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to New
-2025-05-17 17:03:07.083 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 17:03:07.091 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 17:03:07.099 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to New
-2025-05-17 17:03:07.107 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=X
-2025-05-17 17:03:07.117 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 17:03:07.123 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:07.126 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 17:03:07.132 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 17:03:07.180 [main] DEBUG c.f.domain.service.FranchiseService - Branch S1 added to franchise F1
-2025-05-17 17:03:07.183 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 17:03:07.196 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:07.197 [main] WARN  c.f.domain.service.FranchiseService - Product P1 not found in branch B1
-2025-05-17 17:03:07.200 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=F1
-2025-05-17 17:03:07.206 [main] DEBUG c.f.domain.service.FranchiseService - Adding product Prod to branch B1 of franchise F1
-2025-05-17 17:03:07.209 [main] DEBUG c.f.domain.service.FranchiseService - Product Prod added to branch B1
-2025-05-17 17:03:07.213 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 17:03:07.219 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:07.220 [main] DEBUG c.f.domain.service.FranchiseService - Product P1 removed from branch B1
-2025-05-17 17:03:07.227 [main] DEBUG c.f.domain.service.FranchiseService - Saving franchise: Fr1
-2025-05-17 17:03:07.231 [main] DEBUG c.f.domain.service.FranchiseService - Franchise saved with id=F1
-2025-05-17 17:03:07.235 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 17:03:07.239 [main] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
-2025-05-17 17:03:07.244 [main] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
-2025-05-17 17:03:07.249 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:07.253 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:07.257 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 17:03:07.482 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.FranchiseControllerTest]: FranchiseControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 17:03:07.760 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.FranchiseControllerTest
-2025-05-17 17:03:08.464 [main] INFO  c.f.e.rest.FranchiseControllerTest - Starting FranchiseControllerTest using Java 21.0.7 with PID 30912 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:08.465 [main] DEBUG c.f.e.rest.FranchiseControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:08.465 [main] INFO  c.f.e.rest.FranchiseControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:09.613 [main] INFO  c.f.e.rest.FranchiseControllerTest - Started FranchiseControllerTest in 1.714 seconds (process running for 6.863)
-2025-05-17 17:03:09.918 [parallel-1] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1 with rename body RenameRequest(name=NewP)
-2025-05-17 17:03:09.928 [parallel-1] INFO  c.f.api.FranchiseController - Renamed product P1 in branch B1 of franchise F1 to NewP
-2025-05-17 17:03:10.005 [parallel-2] INFO  c.f.api.FranchiseController - Received POST /franchises/F1/branches/B1/products with body AddProductRequest(id=P1, name=Prod, stock=5)
-2025-05-17 17:03:10.060 [parallel-3] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1 with rename body RenameRequest(name=NewB)
-2025-05-17 17:03:10.062 [parallel-3] INFO  c.f.api.FranchiseController - Renamed branch B1 in franchise F1 to NewB
-2025-05-17 17:03:10.071 [parallel-4] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1 with rename body RenameRequest(name=X)
-2025-05-17 17:03:10.088 [parallel-5] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1 with rename body RenameRequest(name=NewName)
-2025-05-17 17:03:10.090 [parallel-5] INFO  c.f.api.FranchiseController - Renamed franchise F1 to NewName
-2025-05-17 17:03:10.101 [parallel-6] INFO  c.f.api.FranchiseController - Received GET /franchises/F1
-2025-05-17 17:03:10.117 [parallel-7] INFO  c.f.api.FranchiseController - Received DELETE /franchises/F1/branches/B1/products/P1
-2025-05-17 17:03:10.126 [parallel-8] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1 with rename body RenameRequest(name=X)
-2025-05-17 17:03:10.145 [parallel-9] INFO  c.f.api.FranchiseController - Received POST /franchises/F1/branches with body AddBranchRequest(id=B1, name=S1)
-2025-05-17 17:03:10.147 [parallel-9] INFO  c.f.api.FranchiseController - Added branch B1 to franchise F1
-2025-05-17 17:03:10.158 [parallel-10] INFO  c.f.api.FranchiseController - Received POST /franchises/NOPE/branches with body AddBranchRequest(id=B1, name=S1)
-2025-05-17 17:03:10.168 [parallel-11] INFO  c.f.api.FranchiseController - Received GET /franchises/X
-2025-05-17 17:03:10.170 [parallel-11] WARN  c.f.api.FranchiseController - Franchise X not found
-2025-05-17 17:03:10.186 [parallel-12] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1/stock with body UpdateStockRequest(stock=10)
-2025-05-17 17:03:10.188 [parallel-12] INFO  c.f.api.FranchiseController - Updated stock for product P1 to 10
-2025-05-17 17:03:10.194 [parallel-1] INFO  c.f.api.FranchiseController - Received GET /franchises/F1/top-stock
-2025-05-17 17:03:10.203 [parallel-1] DEBUG c.f.api.FranchiseController - Top stock for branch B1: P1
-2025-05-17 17:03:10.238 [parallel-2] INFO  c.f.api.FranchiseController - Received GET /franchises
-2025-05-17 17:03:10.239 [parallel-2] DEBUG c.f.api.FranchiseController - Returning franchise F1
-2025-05-17 17:03:10.248 [parallel-3] INFO  c.f.api.FranchiseController - Received POST /franchises with body Franchise(id=F1, name=Fr1, branches=null)
-2025-05-17 17:03:10.249 [parallel-3] INFO  c.f.api.FranchiseController - Created franchise F1
-2025-05-17 17:03:10.254 [parallel-4] INFO  c.f.api.FranchiseController - Received DELETE /franchises/F1/branches/B1/products/P1
-2025-05-17 17:03:10.255 [parallel-4] INFO  c.f.api.FranchiseController - Deleted product P1 from branch B1 of franchise F1
-2025-05-17 17:03:10.263 [parallel-5] INFO  c.f.api.FranchiseController - Received POST /franchises/F1/branches/B1/products with body AddProductRequest(id=P1, name=Prod, stock=5)
-2025-05-17 17:03:10.264 [parallel-5] INFO  c.f.api.FranchiseController - Added product P1 to branch B1 of franchise F1
-2025-05-17 17:03:10.274 [parallel-6] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1/stock with body UpdateStockRequest(stock=10)
-2025-05-17 17:03:10.286 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 17:03:10.300 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.HealthControllerTest
-2025-05-17 17:03:10.330 [main] INFO  c.f.e.rest.HealthControllerTest - Starting HealthControllerTest using Java 21.0.7 with PID 30912 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:10.330 [main] DEBUG c.f.e.rest.HealthControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:10.330 [main] INFO  c.f.e.rest.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:10.454 [main] INFO  c.f.e.rest.HealthControllerTest - Started HealthControllerTest in 0.149 seconds (process running for 7.703)
-2025-05-17 17:03:10.482 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.FranquiciasApiApplicationTests]: FranquiciasApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 17:03:10.494 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.FranquiciasApiApplicationTests
-2025-05-17 17:03:10.519 [main] INFO  c.f.FranquiciasApiApplicationTests - Starting FranquiciasApiApplicationTests using Java 21.0.7 with PID 30912 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:10.519 [main] DEBUG c.f.FranquiciasApiApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:10.520 [main] INFO  c.f.FranquiciasApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:10.927 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 17:03:10.980 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 17:03:11.549 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@53d519cb, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4119a22c, com.mongodb.Jep395RecordCodecProvider@455d5b33, com.mongodb.KotlinCodecProvider@1c7f3eae]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 17:03:11.715 [cluster-ClusterId{value='6829079f6ab6504ef4ff88e3', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=101062300, minRoundTripTimeNanos=0}
-2025-05-17 17:03:12.297 [main] INFO  c.f.FranquiciasApiApplicationTests - Started FranquiciasApiApplicationTests in 1.795 seconds (process running for 9.547)
-2025-05-17 17:03:12.343 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 30912 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:12.343 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:12.343 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:12.477 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 17:03:12.489 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 17:03:12.633 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@8843a10, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4119a22c, com.mongodb.Jep395RecordCodecProvider@455d5b33, com.mongodb.KotlinCodecProvider@1c7f3eae]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 17:03:12.647 [cluster-ClusterId{value='682907a06ab6504ef4ff88e4', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=12372400, minRoundTripTimeNanos=0}
-2025-05-17 17:03:12.814 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
-2025-05-17 17:03:12.817 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 0.505 seconds (process running for 10.067)
-2025-05-17 17:03:13.150 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Finding franchise by id in Mongo: NOPE
-2025-05-17 17:03:13.156 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Saving franchise to Mongo: IGNORED
-2025-05-17 17:03:13.158 [main] INFO  c.f.i.db.MongoFranchiseAdapter - Franchise saved to Mongo: F1
-2025-05-17 17:03:13.163 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Retrieving all franchises from Mongo
-2025-05-17 17:03:13.168 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Found franchise in Mongo: A1
-2025-05-17 17:03:13.169 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Found franchise in Mongo: A2
-2025-05-17 17:03:13.169 [main] INFO  c.f.i.db.MongoFranchiseAdapter - Completed retrieval of all franchises from Mongo
-2025-05-17 17:03:13.170 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Finding franchise by id in Mongo: F2
-2025-05-17 17:03:13.172 [main] INFO  c.f.i.db.MongoFranchiseAdapter - Franchise found in Mongo: F2
-2025-05-17 17:03:15.433 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-17 17:03:15.434 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
-2025-05-17 17:03:42.175 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-05-17 17:03:44.596 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 17:03:44.882 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:44.907 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to X
-2025-05-17 17:03:44.917 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:44.948 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:44.956 [main] DEBUG c.f.domain.service.FranchiseService - Stock for product P1 updated to 10
-2025-05-17 17:03:44.962 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 17:03:44.980 [main] DEBUG c.f.domain.service.FranchiseService - Renaming franchise F1 to New
-2025-05-17 17:03:44.988 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to New
-2025-05-17 17:03:44.995 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 17:03:45.004 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 17:03:45.009 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to New
-2025-05-17 17:03:45.020 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=X
-2025-05-17 17:03:45.032 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 17:03:45.036 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:45.039 [main] DEBUG c.f.domain.service.FranchiseService - Renaming product P1 in branch B1 of franchise F1 to X
-2025-05-17 17:03:45.044 [main] DEBUG c.f.domain.service.FranchiseService - Adding branch S1 to franchise F1
-2025-05-17 17:03:45.118 [main] DEBUG c.f.domain.service.FranchiseService - Branch S1 added to franchise F1
-2025-05-17 17:03:45.123 [main] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise F1
-2025-05-17 17:03:45.141 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:45.143 [main] WARN  c.f.domain.service.FranchiseService - Product P1 not found in branch B1
-2025-05-17 17:03:45.151 [main] DEBUG c.f.domain.service.FranchiseService - Finding franchise by id=F1
-2025-05-17 17:03:45.163 [main] DEBUG c.f.domain.service.FranchiseService - Adding product Prod to branch B1 of franchise F1
-2025-05-17 17:03:45.169 [main] DEBUG c.f.domain.service.FranchiseService - Product Prod added to branch B1
-2025-05-17 17:03:45.175 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 17:03:45.183 [main] DEBUG c.f.domain.service.FranchiseService - Deleting product P1 from branch B1 of franchise F1
-2025-05-17 17:03:45.183 [main] DEBUG c.f.domain.service.FranchiseService - Product P1 removed from branch B1
-2025-05-17 17:03:45.192 [main] DEBUG c.f.domain.service.FranchiseService - Saving franchise: Fr1
-2025-05-17 17:03:45.196 [main] DEBUG c.f.domain.service.FranchiseService - Franchise saved with id=F1
-2025-05-17 17:03:45.202 [main] DEBUG c.f.domain.service.FranchiseService - Adding product X to branch B1 of franchise F1
-2025-05-17 17:03:45.206 [main] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
-2025-05-17 17:03:45.210 [main] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
-2025-05-17 17:03:45.217 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:45.221 [main] DEBUG c.f.domain.service.FranchiseService - Updating stock for product P1 in branch B1 of franchise F1 to 10
-2025-05-17 17:03:45.224 [main] DEBUG c.f.domain.service.FranchiseService - Renaming branch B1 in franchise F1 to X
-2025-05-17 17:03:45.617 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.FranchiseControllerTest]: FranchiseControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 17:03:45.950 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.FranchiseControllerTest
-2025-05-17 17:03:46.836 [main] INFO  c.f.e.rest.FranchiseControllerTest - Starting FranchiseControllerTest using Java 21.0.7 with PID 32584 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:46.837 [main] DEBUG c.f.e.rest.FranchiseControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:46.838 [main] INFO  c.f.e.rest.FranchiseControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:48.431 [main] INFO  c.f.e.rest.FranchiseControllerTest - Started FranchiseControllerTest in 2.293 seconds (process running for 7.778)
-2025-05-17 17:03:48.843 [parallel-1] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1 with rename body RenameRequest(name=NewP)
-2025-05-17 17:03:48.866 [parallel-1] INFO  c.f.api.FranchiseController - Renamed product P1 in branch B1 of franchise F1 to NewP
-2025-05-17 17:03:48.969 [parallel-2] INFO  c.f.api.FranchiseController - Received POST /franchises/F1/branches/B1/products with body AddProductRequest(id=P1, name=Prod, stock=5)
-2025-05-17 17:03:49.065 [parallel-3] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1 with rename body RenameRequest(name=NewB)
-2025-05-17 17:03:49.068 [parallel-3] INFO  c.f.api.FranchiseController - Renamed branch B1 in franchise F1 to NewB
-2025-05-17 17:03:49.088 [parallel-4] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1 with rename body RenameRequest(name=X)
-2025-05-17 17:03:49.112 [parallel-5] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1 with rename body RenameRequest(name=NewName)
-2025-05-17 17:03:49.114 [parallel-5] INFO  c.f.api.FranchiseController - Renamed franchise F1 to NewName
-2025-05-17 17:03:49.129 [parallel-6] INFO  c.f.api.FranchiseController - Received GET /franchises/F1
-2025-05-17 17:03:49.147 [parallel-7] INFO  c.f.api.FranchiseController - Received DELETE /franchises/F1/branches/B1/products/P1
-2025-05-17 17:03:49.165 [parallel-8] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1 with rename body RenameRequest(name=X)
-2025-05-17 17:03:49.191 [parallel-9] INFO  c.f.api.FranchiseController - Received POST /franchises/F1/branches with body AddBranchRequest(id=B1, name=S1)
-2025-05-17 17:03:49.194 [parallel-9] INFO  c.f.api.FranchiseController - Added branch B1 to franchise F1
-2025-05-17 17:03:49.209 [parallel-10] INFO  c.f.api.FranchiseController - Received POST /franchises/NOPE/branches with body AddBranchRequest(id=B1, name=S1)
-2025-05-17 17:03:49.221 [parallel-11] INFO  c.f.api.FranchiseController - Received GET /franchises/X
-2025-05-17 17:03:49.223 [parallel-11] WARN  c.f.api.FranchiseController - Franchise X not found
-2025-05-17 17:03:49.240 [parallel-12] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1/stock with body UpdateStockRequest(stock=10)
-2025-05-17 17:03:49.243 [parallel-12] INFO  c.f.api.FranchiseController - Updated stock for product P1 to 10
-2025-05-17 17:03:49.256 [parallel-1] INFO  c.f.api.FranchiseController - Received GET /franchises/F1/top-stock
-2025-05-17 17:03:49.272 [parallel-1] DEBUG c.f.api.FranchiseController - Top stock for branch B1: P1
-2025-05-17 17:03:49.323 [parallel-2] INFO  c.f.api.FranchiseController - Received GET /franchises
-2025-05-17 17:03:49.325 [parallel-2] DEBUG c.f.api.FranchiseController - Returning franchise F1
-2025-05-17 17:03:49.337 [parallel-3] INFO  c.f.api.FranchiseController - Received POST /franchises with body Franchise(id=F1, name=Fr1, branches=null)
-2025-05-17 17:03:49.338 [parallel-3] INFO  c.f.api.FranchiseController - Created franchise F1
-2025-05-17 17:03:49.346 [parallel-4] INFO  c.f.api.FranchiseController - Received DELETE /franchises/F1/branches/B1/products/P1
-2025-05-17 17:03:49.347 [parallel-4] INFO  c.f.api.FranchiseController - Deleted product P1 from branch B1 of franchise F1
-2025-05-17 17:03:49.357 [parallel-5] INFO  c.f.api.FranchiseController - Received POST /franchises/F1/branches/B1/products with body AddProductRequest(id=P1, name=Prod, stock=5)
-2025-05-17 17:03:49.358 [parallel-5] INFO  c.f.api.FranchiseController - Added product P1 to branch B1 of franchise F1
-2025-05-17 17:03:49.370 [parallel-6] INFO  c.f.api.FranchiseController - Received PATCH /franchises/F1/branches/B1/products/P1/stock with body UpdateStockRequest(stock=10)
-2025-05-17 17:03:49.385 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.entrypoints.rest.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 17:03:49.406 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.entrypoints.rest.HealthControllerTest
-2025-05-17 17:03:49.446 [main] INFO  c.f.e.rest.HealthControllerTest - Starting HealthControllerTest using Java 21.0.7 with PID 32584 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:49.446 [main] DEBUG c.f.e.rest.HealthControllerTest - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:49.446 [main] INFO  c.f.e.rest.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:49.609 [main] INFO  c.f.e.rest.HealthControllerTest - Started HealthControllerTest in 0.199 seconds (process running for 8.955)
-2025-05-17 17:03:49.640 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.franquicias.FranquiciasApiApplicationTests]: FranquiciasApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-17 17:03:49.652 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.franquicias.FranquiciasApiApplication for test class com.franquicias.FranquiciasApiApplicationTests
-2025-05-17 17:03:49.681 [main] INFO  c.f.FranquiciasApiApplicationTests - Starting FranquiciasApiApplicationTests using Java 21.0.7 with PID 32584 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:49.682 [main] DEBUG c.f.FranquiciasApiApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:49.682 [main] INFO  c.f.FranquiciasApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:50.156 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 17:03:50.229 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 17:03:50.864 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@1a714d1, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3f13f033, com.mongodb.Jep395RecordCodecProvider@6e432c80, com.mongodb.KotlinCodecProvider@60cb502a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 17:03:51.048 [cluster-ClusterId{value='682907c6793a9a408271025b', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=129441900, minRoundTripTimeNanos=0}
-2025-05-17 17:03:51.768 [main] INFO  c.f.FranquiciasApiApplicationTests - Started FranquiciasApiApplicationTests in 2.11 seconds (process running for 11.114)
-2025-05-17 17:03:51.814 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 32584 (started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:03:51.815 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:03:51.815 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:03:51.963 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 17:03:51.976 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 17:03:52.104 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@2550a63c, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3f13f033, com.mongodb.Jep395RecordCodecProvider@6e432c80, com.mongodb.KotlinCodecProvider@60cb502a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 17:03:52.119 [cluster-ClusterId{value='682907c8793a9a408271025c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13237500, minRoundTripTimeNanos=0}
-2025-05-17 17:03:52.277 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
-2025-05-17 17:03:52.280 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 0.492 seconds (process running for 11.627)
-2025-05-17 17:03:52.589 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Finding franchise by id in Mongo: NOPE
-2025-05-17 17:03:52.593 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Saving franchise to Mongo: IGNORED
-2025-05-17 17:03:52.597 [main] INFO  c.f.i.db.MongoFranchiseAdapter - Franchise saved to Mongo: F1
-2025-05-17 17:03:52.601 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Retrieving all franchises from Mongo
-2025-05-17 17:03:52.604 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Found franchise in Mongo: A1
-2025-05-17 17:03:52.606 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Found franchise in Mongo: A2
-2025-05-17 17:03:52.606 [main] INFO  c.f.i.db.MongoFranchiseAdapter - Completed retrieval of all franchises from Mongo
-2025-05-17 17:03:52.609 [main] DEBUG c.f.i.db.MongoFranchiseAdapter - Finding franchise by id in Mongo: F2
-2025-05-17 17:03:52.610 [main] INFO  c.f.i.db.MongoFranchiseAdapter - Franchise found in Mongo: F2
-2025-05-17 17:03:54.894 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-17 17:03:54.896 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
-2025-05-17 17:04:26.593 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-05-17 17:04:26.647 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 16432 (C:\Repos2\franquicias-api\target\classes started by pipea in C:\Repos2\franquicias-api)
-2025-05-17 17:04:26.647 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-17 17:04:26.648 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-17 17:04:27.154 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-05-17 17:04:27.247 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 1 Reactive MongoDB repository interface.
-2025-05-17 17:04:27.748 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@1c34365c, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@348137e8, com.mongodb.Jep395RecordCodecProvider@412c5e8b, com.mongodb.KotlinCodecProvider@637791d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-05-17 17:04:27.851 [cluster-ClusterId{value='682907eb331a850195fb3ac3', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=49753600, minRoundTripTimeNanos=0}
-2025-05-17 17:04:28.358 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
-2025-05-17 17:04:28.367 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 1.96 seconds (process running for 2.329)
-2025-05-17 17:04:44.635 [reactor-http-nio-2] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 220 ms
-2025-05-17 17:04:51.125 [reactor-http-nio-2] INFO  c.f.api.FranchiseController - Received GET /franchises
-2025-05-17 17:04:51.125 [reactor-http-nio-2] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
-2025-05-17 17:04:51.241 [nioEventLoopGroup-3-3] DEBUG c.f.api.FranchiseController - Returning franchise 1
-2025-05-17 17:04:51.250 [nioEventLoopGroup-3-3] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
-2025-05-17 17:05:03.533 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-17 17:05:03.537 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-05-18 00:25:36.633 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-18 00:25:36.723 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 22728 (C:\Repos2\franquicias-api\target\classes started by pipea in C:\Repos2\franquicias-api)
+2025-05-18 00:25:36.723 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-18 00:25:36.724 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-18 00:25:37.366 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-05-18 00:25:37.499 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 127 ms. Found 1 Reactive MongoDB repository interface.
+2025-05-18 00:25:37.892 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'franchiseController' defined in file [C:\Repos2\franquicias-api\target\classes\com\franquicias\api\FranchiseController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'franchiseService' defined in file [C:\Repos2\franquicias-api\target\classes\com\franquicias\domain\service\FranchiseService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'franchiseReactiveRepository' defined in com.franquicias.infrastructure.db.FranchiseReactiveRepository defined in @EnableReactiveMongoRepositories declared on MongoReactiveRepositoriesRegistrar.EnableReactiveMongoRepositoriesConfiguration: Cannot resolve reference to bean 'reactiveMongoTemplate' while setting bean property 'reactiveMongoOperations'
+2025-05-18 00:25:37.898 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-18 00:25:37.917 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'franchiseController' defined in file [C:\Repos2\franquicias-api\target\classes\com\franquicias\api\FranchiseController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'franchiseService' defined in file [C:\Repos2\franquicias-api\target\classes\com\franquicias\domain\service\FranchiseService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'franchiseReactiveRepository' defined in com.franquicias.infrastructure.db.FranchiseReactiveRepository defined in @EnableReactiveMongoRepositories declared on MongoReactiveRepositoriesRegistrar.EnableReactiveMongoRepositoriesConfiguration: Cannot resolve reference to bean 'reactiveMongoTemplate' while setting bean property 'reactiveMongoOperations'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.franquicias.FranquiciasApiApplication.main(FranquiciasApiApplication.java:9)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'franchiseService' defined in file [C:\Repos2\franquicias-api\target\classes\com\franquicias\domain\service\FranchiseService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'franchiseReactiveRepository' defined in com.franquicias.infrastructure.db.FranchiseReactiveRepository defined in @EnableReactiveMongoRepositories declared on MongoReactiveRepositoriesRegistrar.EnableReactiveMongoRepositoriesConfiguration: Cannot resolve reference to bean 'reactiveMongoTemplate' while setting bean property 'reactiveMongoOperations'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'franchiseReactiveRepository' defined in com.franquicias.infrastructure.db.FranchiseReactiveRepository defined in @EnableReactiveMongoRepositories declared on MongoReactiveRepositoriesRegistrar.EnableReactiveMongoRepositoriesConfiguration: Cannot resolve reference to bean 'reactiveMongoTemplate' while setting bean property 'reactiveMongoOperations'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1717)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1466)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reactiveMongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoReactiveDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'reactiveMongoTemplate' parameter 0: Error creating bean with name 'reactiveMongoDatabaseFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoReactiveDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'reactiveMongoDatabaseFactory' parameter 0: Error creating bean with name 'reactiveStreamsMongoClient' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration.class]: Failed to instantiate [com.mongodb.reactivestreams.client.MongoClient]: Factory method 'reactiveStreamsMongoClient' threw exception with message: Error creating bean with name 'standardMongoSettingsCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration$MongoClientSettingsConfiguration.class]: Failed to instantiate [org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer]: Factory method 'standardMongoSettingsCustomizer' threw exception with message: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reactiveMongoDatabaseFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoReactiveDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'reactiveMongoDatabaseFactory' parameter 0: Error creating bean with name 'reactiveStreamsMongoClient' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration.class]: Failed to instantiate [com.mongodb.reactivestreams.client.MongoClient]: Factory method 'reactiveStreamsMongoClient' threw exception with message: Error creating bean with name 'standardMongoSettingsCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration$MongoClientSettingsConfiguration.class]: Failed to instantiate [org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer]: Factory method 'standardMongoSettingsCustomizer' threw exception with message: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 59 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'reactiveStreamsMongoClient' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration.class]: Failed to instantiate [com.mongodb.reactivestreams.client.MongoClient]: Factory method 'reactiveStreamsMongoClient' threw exception with message: Error creating bean with name 'standardMongoSettingsCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration$MongoClientSettingsConfiguration.class]: Failed to instantiate [org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer]: Factory method 'standardMongoSettingsCustomizer' threw exception with message: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mongodb.reactivestreams.client.MongoClient]: Factory method 'reactiveStreamsMongoClient' threw exception with message: Error creating bean with name 'standardMongoSettingsCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration$MongoClientSettingsConfiguration.class]: Failed to instantiate [org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer]: Factory method 'standardMongoSettingsCustomizer' threw exception with message: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'standardMongoSettingsCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoReactiveAutoConfiguration$MongoClientSettingsConfiguration.class]: Failed to instantiate [org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer]: Factory method 'standardMongoSettingsCustomizer' threw exception with message: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1998)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1955)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1772)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1688)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2614)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2608)
+	at org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration.reactiveStreamsMongoClient(MongoReactiveAutoConfiguration.java:65)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 89 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer]: Factory method 'standardMongoSettingsCustomizer' threw exception with message: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 109 common frames omitted
+Caused by: java.lang.IllegalArgumentException: The connection string is invalid. Connection strings must start with either 'mongodb://' or 'mongodb+srv://
+	at com.mongodb.ConnectionString.<init>(ConnectionString.java:362)
+	at com.mongodb.ConnectionString.<init>(ConnectionString.java:343)
+	at org.springframework.boot.autoconfigure.mongo.PropertiesMongoConnectionDetails.getConnectionString(PropertiesMongoConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration$MongoClientSettingsConfiguration.standardMongoSettingsCustomizer(MongoReactiveAutoConfiguration.java:81)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 112 common frames omitted
+2025-05-18 00:29:24.955 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-18 00:29:25.013 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 28568 (C:\Repos2\franquicias-api\target\classes started by pipea in C:\Repos2\franquicias-api)
+2025-05-18 00:29:25.014 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-18 00:29:25.015 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-18 00:29:25.434 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-05-18 00:29:25.526 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 1 Reactive MongoDB repository interface.
+2025-05-18 00:29:26.438 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='pipear07', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@78a8978a, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@f171912, com.mongodb.Jep395RecordCodecProvider@7d4d8579, com.mongodb.KotlinCodecProvider@159424e2]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=franquicias-free.u8qacho.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-my6am5-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-05-18 00:29:26.634 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:29:26.701 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:29:26.703 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:29:27.687 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=341581200, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000029, setVersion=1, topologyVersion=TopologyVersion{processId=682253b5850b6a30de4ce596, counter=6}, lastWriteDate=Sun May 18 00:29:28 COT 2025, lastUpdateTimeNanos=112941049342800}
+2025-05-18 00:29:27.687 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=341599200, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=682253ec240f2d0799c9ff69, counter=3}, lastWriteDate=Sun May 18 00:29:28 COT 2025, lastUpdateTimeNanos=112941049353900}
+2025-05-18 00:29:27.690 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=340245000, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=6822537c8e77112d6c990264, counter=4}, lastWriteDate=Sun May 18 00:29:28 COT 2025, lastUpdateTimeNanos=112941049376300}
+2025-05-18 00:29:27.690 [cluster-ClusterId{value='6829703614bbeb3f26417dc1', description='null'}-ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017 with max election id 7fffffff0000000000000029 and max set version 1
+2025-05-18 00:29:29.791 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-18 00:29:31.910 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-18 00:29:31.924 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-18 00:30:29.919 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-18 00:30:29.968 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 26032 (C:\Repos2\franquicias-api\target\classes started by pipea in C:\Repos2\franquicias-api)
+2025-05-18 00:30:29.969 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-18 00:30:29.969 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-18 00:30:30.376 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-05-18 00:30:30.462 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 1 Reactive MongoDB repository interface.
+2025-05-18 00:30:31.060 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:30:31.065 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='pipear07', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@157d3a45, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@750ed637, com.mongodb.Jep395RecordCodecProvider@5190010f, com.mongodb.KotlinCodecProvider@673e76b3]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=franquicias-free.u8qacho.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-my6am5-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-05-18 00:30:31.088 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:30:31.091 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:30:31.633 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-05-18 00:30:31.649 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 1.9 seconds (process running for 2.283)
+2025-05-18 00:30:32.014 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=321448100, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=682253ec240f2d0799c9ff69, counter=3}, lastWriteDate=Sun May 18 00:30:32 COT 2025, lastUpdateTimeNanos=113005366439400}
+2025-05-18 00:30:32.014 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=318885900, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=6822537c8e77112d6c990264, counter=4}, lastWriteDate=Sun May 18 00:30:32 COT 2025, lastUpdateTimeNanos=113005365964200}
+2025-05-18 00:30:32.014 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=318507700, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000029, setVersion=1, topologyVersion=TopologyVersion{processId=682253b5850b6a30de4ce596, counter=6}, lastWriteDate=Sun May 18 00:30:32 COT 2025, lastUpdateTimeNanos=113005365590900}
+2025-05-18 00:30:32.017 [cluster-ClusterId{value='682970778f89de701060804a', description='null'}-ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017 with max election id 7fffffff0000000000000029 and max set version 1
+2025-05-18 00:34:15.163 [reactor-http-nio-5] INFO  c.f.api.FranchiseController - Received GET /franchises
+2025-05-18 00:34:15.164 [reactor-http-nio-5] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
+2025-05-18 00:34:16.349 [nioEventLoopGroup-3-7] ERROR o.s.b.a.w.r.e.AbstractErrorWebExceptionHandler - [7895aabe-2]  500 Server Error for HTTP GET "/franchises"
+org.springframework.data.mongodb.UncategorizedMongoDbException: Command failed with error 8000 (AtlasError): 'user is not allowed to do action [find] on [franquicias.franchises]' on server ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017. The full response is {"ok": 0, "errmsg": "user is not allowed to do action [find] on [franquicias.franchises]", "code": 8000, "codeName": "AtlasError"}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:151)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Handler com.franquicias.api.FranchiseController#list() [DispatcherHandler]
+	*__checkpoint ⇢ HTTP GET "/franchises" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:151)
+		at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:74)
+		at org.springframework.data.mongodb.core.ReactiveMongoTemplate.potentiallyConvertRuntimeException(ReactiveMongoTemplate.java:2773)
+		at org.springframework.data.mongodb.core.ReactiveMongoTemplate.lambda$translateException$100(ReactiveMongoTemplate.java:2756)
+		at reactor.core.publisher.Flux.lambda$onErrorMap$28(Flux.java:7318)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:94)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256)
+		at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:359)
+		at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onError(FluxMergeSequential.java:249)
+		at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191)
+		at reactor.core.publisher.LambdaMonoSubscriber.doError(LambdaMonoSubscriber.java:155)
+		at reactor.core.publisher.LambdaMonoSubscriber.onError(LambdaMonoSubscriber.java:150)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onError(FluxMap.java:265)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onError(MonoPeekTerminal.java:258)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205)
+		at com.mongodb.reactivestreams.client.internal.MongoOperationPublisher.lambda$sinkToCallback$37(MongoOperationPublisher.java:586)
+		at com.mongodb.reactivestreams.client.internal.OperationExecutorImpl.lambda$execute$1(OperationExecutorImpl.java:96)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.function.RetryingAsyncCallbackSupplier$RetryingCallback.onResult(RetryingAsyncCallbackSupplier.java:121)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.operation.FindOperation.lambda$exceptionTransformingCallback$6(FindOperation.java:343)
+		at com.mongodb.internal.operation.AsyncOperationHelper.lambda$transformingReadCallback$21(AsyncOperationHelper.java:462)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.lambda$executeAsync$0(DefaultServer.java:244)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.connection.CommandProtocolImpl.lambda$executeAsync$0(CommandProtocolImpl.java:77)
+		at com.mongodb.internal.connection.UsageTrackingInternalConnection.lambda$sendAndReceiveAsync$1(UsageTrackingInternalConnection.java:139)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+		at com.mongodb.internal.async.SingleResultCallback.completeExceptionally(SingleResultCallback.java:71)
+		at com.mongodb.internal.async.AsyncSupplier.lambda$onErrorIf$5(AsyncSupplier.java:144)
+		at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+		at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+		at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+		at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendCommandMessageAsync$9(InternalStreamConnection.java:630)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:946)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:909)
+		at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:743)
+		at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:740)
+		at com.mongodb.internal.connection.netty.NettyStream.readAsync(NettyStream.java:334)
+		at com.mongodb.internal.connection.netty.NettyStream.readAsync(NettyStream.java:278)
+		at com.mongodb.internal.connection.InternalStreamConnection.readAsync(InternalStreamConnection.java:740)
+		at com.mongodb.internal.connection.InternalStreamConnection.access$500(InternalStreamConnection.java:103)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:898)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:880)
+		at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:743)
+		at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:740)
+		at com.mongodb.internal.connection.netty.NettyStream.readAsync(NettyStream.java:334)
+		at com.mongodb.internal.connection.netty.NettyStream.handleReadResponse(NettyStream.java:361)
+		at com.mongodb.internal.connection.netty.NettyStream.access$900(NettyStream.java:115)
+		at com.mongodb.internal.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:437)
+		at com.mongodb.internal.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:434)
+		at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.MongoQueryException: Command failed with error 8000 (AtlasError): 'user is not allowed to do action [find] on [franquicias.franchises]' on server ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017. The full response is {"ok": 0, "errmsg": "user is not allowed to do action [find] on [franquicias.franchises]", "code": 8000, "codeName": "AtlasError"}
+	at com.mongodb.internal.operation.FindOperation.lambda$exceptionTransformingCallback$6(FindOperation.java:344)
+	at com.mongodb.internal.operation.AsyncOperationHelper.lambda$transformingReadCallback$21(AsyncOperationHelper.java:462)
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.lambda$executeAsync$0(DefaultServer.java:244)
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+	at com.mongodb.internal.connection.CommandProtocolImpl.lambda$executeAsync$0(CommandProtocolImpl.java:77)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.lambda$sendAndReceiveAsync$1(UsageTrackingInternalConnection.java:139)
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+	at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+	at com.mongodb.internal.async.SingleResultCallback.completeExceptionally(SingleResultCallback.java:71)
+	at com.mongodb.internal.async.AsyncSupplier.lambda$onErrorIf$5(AsyncSupplier.java:144)
+	at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+	at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+	at com.mongodb.internal.async.AsyncSupplier.lambda$finish$0(AsyncSupplier.java:73)
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendCommandMessageAsync$9(InternalStreamConnection.java:630)
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:946)
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:909)
+	at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:743)
+	at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:740)
+	at com.mongodb.internal.connection.netty.NettyStream.readAsync(NettyStream.java:334)
+	at com.mongodb.internal.connection.netty.NettyStream.readAsync(NettyStream.java:278)
+	at com.mongodb.internal.connection.InternalStreamConnection.readAsync(InternalStreamConnection.java:740)
+	at com.mongodb.internal.connection.InternalStreamConnection.access$500(InternalStreamConnection.java:103)
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:898)
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:880)
+	at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:743)
+	at com.mongodb.internal.connection.InternalStreamConnection$2.completed(InternalStreamConnection.java:740)
+	at com.mongodb.internal.connection.netty.NettyStream.readAsync(NettyStream.java:334)
+	at com.mongodb.internal.connection.netty.NettyStream.handleReadResponse(NettyStream.java:361)
+	at com.mongodb.internal.connection.netty.NettyStream.access$900(NettyStream.java:115)
+	at com.mongodb.internal.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:437)
+	at com.mongodb.internal.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:434)
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-18 00:40:08.627 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-18 00:40:08.632 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-05-18 00:41:36.739 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-18 00:41:36.841 [main] INFO  c.f.FranquiciasApiApplication - Starting FranquiciasApiApplication using Java 21.0.7 with PID 25976 (C:\Repos2\franquicias-api\target\classes started by pipea in C:\Repos2\franquicias-api)
+2025-05-18 00:41:36.841 [main] DEBUG c.f.FranquiciasApiApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-18 00:41:36.842 [main] INFO  c.f.FranquiciasApiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-18 00:41:37.448 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-05-18 00:41:37.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 1 Reactive MongoDB repository interface.
+2025-05-18 00:41:38.447 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Microsoft/21.0.7+6-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='pipear07', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@f238e4f, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3b24087d, com.mongodb.Jep395RecordCodecProvider@75fe1619, com.mongodb.KotlinCodecProvider@4e245739]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=franquicias-free.u8qacho.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-my6am5-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-05-18 00:41:38.577 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:41:38.618 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:41:38.620 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-srv-franquicias-free.u8qacho.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017 to client view of cluster
+2025-05-18 00:41:39.298 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-05-18 00:41:39.317 [main] INFO  c.f.FranquiciasApiApplication - Started FranquiciasApiApplication in 2.832 seconds (process running for 3.293)
+2025-05-18 00:41:39.561 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=389968400, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000029, setVersion=1, topologyVersion=TopologyVersion{processId=682253b5850b6a30de4ce596, counter=6}, lastWriteDate=Sun May 18 00:41:40 COT 2025, lastUpdateTimeNanos=113672920368500}
+2025-05-18 00:41:39.562 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=387151800, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=682253ec240f2d0799c9ff69, counter=3}, lastWriteDate=Sun May 18 00:41:40 COT 2025, lastUpdateTimeNanos=113672920364300}
+2025-05-18 00:41:39.562 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=390711800, minRoundTripTimeNanos=0, setName='atlas-my6am5-shard-0', canonicalAddress=ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, hosts=[ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-00.u8qacho.mongodb.net:27017, ac-qqj1ut8-shard-00-01.u8qacho.mongodb.net:27017], passives=[], arbiters=[], primary='ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=6822537c8e77112d6c990264, counter=4}, lastWriteDate=Sun May 18 00:41:40 COT 2025, lastUpdateTimeNanos=113672920425900}
+2025-05-18 00:41:39.564 [cluster-ClusterId{value='68297312c3330e4d605d26db', description='null'}-ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-qqj1ut8-shard-00-02.u8qacho.mongodb.net:27017 with max election id 7fffffff0000000000000029 and max set version 1
+2025-05-18 00:41:53.566 [reactor-http-nio-3] INFO  c.f.api.FranchiseController - Received GET /franchises
+2025-05-18 00:41:53.566 [reactor-http-nio-3] DEBUG c.f.domain.service.FranchiseService - Retrieving all franchises
+2025-05-18 00:41:54.177 [nioEventLoopGroup-3-7] DEBUG c.f.domain.service.FranchiseService - Completed retrieval of all franchises
+2025-05-18 00:42:27.297 [reactor-http-nio-7] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 540 ms
+2025-05-18 00:44:07.425 [reactor-http-nio-9] INFO  c.f.api.FranchiseController - Received POST /franchises with body Franchise(id=null, name=null, branches=null)
+2025-05-18 00:44:07.425 [reactor-http-nio-9] DEBUG c.f.domain.service.FranchiseService - Saving franchise: null
+2025-05-18 00:44:07.671 [nioEventLoopGroup-3-7] DEBUG c.f.domain.service.FranchiseService - Franchise saved with id=682973a7c3330e4d605d26dc
+2025-05-18 00:44:07.673 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Created franchise 682973a7c3330e4d605d26dc
+2025-05-18 00:44:20.292 [reactor-http-nio-9] INFO  c.f.api.FranchiseController - Received POST /franchises with body Franchise(id=1, name=Star Coffee, branches=[])
+2025-05-18 00:44:20.292 [reactor-http-nio-9] DEBUG c.f.domain.service.FranchiseService - Saving franchise: Star Coffee
+2025-05-18 00:44:20.398 [nioEventLoopGroup-3-7] DEBUG c.f.domain.service.FranchiseService - Franchise saved with id=1
+2025-05-18 00:44:20.399 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Created franchise 1
+2025-05-18 00:44:43.886 [reactor-http-nio-9] INFO  c.f.api.FranchiseController - Received POST /franchises/1/branches with body AddBranchRequest(id=b1, name=Centro)
+2025-05-18 00:44:43.889 [reactor-http-nio-9] DEBUG c.f.domain.service.FranchiseService - Adding branch Centro to franchise 1
+2025-05-18 00:44:43.992 [nioEventLoopGroup-3-7] DEBUG c.f.domain.service.FranchiseService - Branch Centro added to franchise 1
+2025-05-18 00:44:44.077 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Added branch b1 to franchise 1
+2025-05-18 00:45:45.333 [reactor-http-nio-11] INFO  c.f.api.FranchiseController - Received POST /franchises/1/branches/b1/products with body AddProductRequest(id=p1, name=Cappuccino, stock=50)
+2025-05-18 00:45:45.340 [reactor-http-nio-11] DEBUG c.f.domain.service.FranchiseService - Adding product Cappuccino to branch b1 of franchise 1
+2025-05-18 00:45:45.424 [nioEventLoopGroup-3-7] DEBUG c.f.domain.service.FranchiseService - Product Cappuccino added to branch b1
+2025-05-18 00:45:45.511 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Added product p1 to branch b1 of franchise 1
+2025-05-18 00:46:42.492 [reactor-http-nio-11] INFO  c.f.api.FranchiseController - Received PATCH /franchises/1/branches/b1/products/p1/stock with body UpdateStockRequest(stock=75)
+2025-05-18 00:46:42.493 [reactor-http-nio-11] DEBUG c.f.domain.service.FranchiseService - Updating stock for product p1 in branch b1 of franchise 1 to 75
+2025-05-18 00:46:42.574 [nioEventLoopGroup-3-7] DEBUG c.f.domain.service.FranchiseService - Stock for product p1 updated to 75
+2025-05-18 00:46:42.669 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Updated stock for product p1 to 75
+2025-05-18 00:46:54.608 [reactor-http-nio-11] INFO  c.f.api.FranchiseController - Received GET /franchises/1/top-stock
+2025-05-18 00:46:54.608 [reactor-http-nio-11] DEBUG c.f.domain.service.FranchiseService - Getting top stock by branch for franchise 1
+2025-05-18 00:46:54.696 [nioEventLoopGroup-3-7] DEBUG c.f.api.FranchiseController - Top stock for branch b1: p1
+2025-05-18 00:48:19.539 [reactor-http-nio-1] INFO  c.f.api.FranchiseController - Received PATCH /franchises/1 with rename body RenameRequest(name=Star Coffee Reloaded)
+2025-05-18 00:48:19.541 [reactor-http-nio-1] DEBUG c.f.domain.service.FranchiseService - Renaming franchise 1 to Star Coffee Reloaded
+2025-05-18 00:48:19.701 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Renamed franchise 1 to Star Coffee Reloaded
+2025-05-18 00:48:47.664 [reactor-http-nio-1] INFO  c.f.api.FranchiseController - Received PATCH /franchises/1/branches/b1 with rename body RenameRequest(name=Sucursal Centro Actualizada)
+2025-05-18 00:48:47.664 [reactor-http-nio-1] DEBUG c.f.domain.service.FranchiseService - Renaming branch b1 in franchise 1 to Sucursal Centro Actualizada
+2025-05-18 00:48:47.831 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Renamed branch b1 in franchise 1 to Sucursal Centro Actualizada
+2025-05-18 00:49:12.137 [reactor-http-nio-1] INFO  c.f.api.FranchiseController - Received PATCH /franchises/1/branches/b1/products/p1 with rename body RenameRequest(name=Café Americano)
+2025-05-18 00:49:12.137 [reactor-http-nio-1] DEBUG c.f.domain.service.FranchiseService - Renaming product p1 in branch b1 of franchise 1 to Café Americano
+2025-05-18 00:49:12.296 [nioEventLoopGroup-3-7] INFO  c.f.api.FranchiseController - Renamed product p1 in branch b1 of franchise 1 to Café Americano
