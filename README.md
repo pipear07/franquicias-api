@@ -243,7 +243,7 @@ Todos los endpoints devuelven y reciben **JSON**.
 ---
 
 
-**Se incluye un documento PDF sobre la ejecucion de cada uno de los endpoints en la ruta raiz llamada src/docs/DocumentacionPruebaNequi.pdf**
+**Se incluye un documento WORD sobre la ejecucion de cada uno de los endpoints en la ruta raiz llamada src/docs/DocumentacionPruebaNequi.docx**
 
 
 ---
