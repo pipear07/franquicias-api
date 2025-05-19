@@ -1,2 +1,10 @@
-*.json
+# No subir este Dockerrun
 Dockerrun.aws.json
+
+# Evita paquetes pesados
+infra/
+target/
+*.zip
+.terraform/
+terraform.tfstate*
+logs/

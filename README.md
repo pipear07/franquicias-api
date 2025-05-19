@@ -58,6 +58,11 @@ Esta aplicacion gestiona una colección de **franquicias**, cada una con multipl
    cd franquicias-api
    ```
 
+2. Exportar la variable de entorno en PowerShell (esa variable es la que le indica al contenedor como llegar a la base de datos en MongoDB Atlas):
+   ```bash
+   $env:SPRING_DATA_MONGODB_URI = "mongodb+srv://pipear07:Afam2030@cluster0.abzvzny.mongodb.net/franquicias?retryWrites=true&w=majority"
+   ```
+
 2. Ejecutar con Maven:
    ```bash
    mvn clean spring-boot:run
@@ -70,11 +75,46 @@ Esta aplicacion gestiona una colección de **franquicias**, cada una con multipl
 
 ---
 
+## Terraform (ECS Fargate)
+(Terraform inyecta esa variable en la definición de la tarea ECS/Fargate, pero no se conecta directamente a MongoDB)
+
+- Codigo de aplicacion: una API en Spring Boot que expone endpoints reactivos y se conecta a MongoDB Atlas via la variable de entorno SPRING_DATA_MONGODB_URI.
+
+- Infraestructura como codigo con Terraform: Se creo un Cluster de ECS Fargate, define la Task Definition con la imagen Docker y las variables de entorno, configura un   Application Load Balancer con su Target Group y Security Groups, y despliega todo en la VPC existente usando las subnets públicas. Quedo pendiente por temas de permisos y por los costos de la infraestructura, quedo pendiente arreglar que escuchara desde afuera del contenedor con la direccion ip pública para que pueda acceder a internet.
+
+- Complete terraform.tfvars with your values:
+  region        = "us-east-2"
+  vpc_id        = "vpc-036aea0e84d497cba"
+  subnet_ids    = ["subnet-04e0b7808ee7d3088","subnet-06160a399b2d0d631","subnet-08c0ed5fc13597c6f"]
+  image         = "pipear07/franquicias-api:latest"
+  container_port = 8080
+  env_vars = {
+    SPRING_DATA_MONGODB_URI = "mongodb+srv://pipear07:Afam2030@cluster0.abzvzny.mongodb.net/franquicias?retryWrites=true&w=majority"
+  }
+
+- Init & apply:
+  cd infra/terraform/atlas/ecs-fargate
+  terraform init
+  terraform apply
+
+
+## Elastic Beanstalk
+--------------------
+cd C:/Repos2/franquicias-api
+eb init franquicias-api --platform "Docker running on 64bit Amazon Linux 2" --region us-east-2
+eb use franquicias-vpc-single
+eb deploy
+
+
 ## Comandos Docker
 
 - Construir el JAR:
    ```bash
    mvn clean package -DskipTests
+   ```
+- Exportar la variable de entorno en PowerShell (esa variable es la que le indica al contenedor como llegar a la base de datos en MongoDB Atlas):
+   ```bash
+   $env:SPRING_DATA_MONGODB_URI = "mongodb+srv://pipear07:Afam2030@cluster0.abzvzny.mongodb.net/franquicias?retryWrites=true&w=majority"
    ```
 - Construir imagen:
   ```bash
@@ -153,8 +193,32 @@ Todos los endpoints devuelven y reciben **JSON**.
 - **v1.1-docker**: Empaquetado Docker
 - **v1.2-rename**: Endpoints PATCH rename  
 - **v1.4-readme**: Documentacion completa
-- **v1.5-readme**: Cobertura del 80% e informe JaCoCo incluido
-- **v1.6-readme**: MongoDb_Atlas
+- **v1.5-Jacoco**: Cobertura del 80% e informe JaCoCo incluido
+- **v1.6-MongoDB_Atlas**: MongoDb_Atlas
+- **v7.0-ServerlessFreeWithTerraform**: ServerlessFreeWithTerraform
+
+
+---
+
+## Amazon Web Service (Lo que alcance a configurar en la Nube)
+
+![AWS - Bad Request but I was already listening to the app](src/docs/img/Bad_request_AWS.png)
+
+![AWS - Elastic Beanstalk](src/docs/img/AWS_Elastic_Beanstalk.png)
+
+![AWS - Franquicias ecs-env](src/docs/img/AWS_Franquicias-ecs-env.png)
+
+![AWS - VPC](src/docs/img/AWS_VPC.png)
+
+![AWS - IAM](src/docs/img/AWS_IAM.png)
+
+
+---
+
+## MongoDB 
+
+![MongoDB Atlas](src/docs/img/Mongo_DB_Atlas.png)
+
 
 ---
 
@@ -167,9 +231,19 @@ Todos los endpoints devuelven y reciben **JSON**.
 5. **Validación y manejo de errores**: uso de `@Valid`, `ResponseStatusException` y operadores `switchIfEmpty` para devolver HTTP 4xx claros en lugar de 500 genericos.  
 6. **Contenedorizacion con Docker**: Dockerfile minimal y Docker Compose aseguran entornos reproducibles y facilitan despliegues en la nube.
 
+7. **AWS**: Brinda una infraestructura global, escalable y altamente disponible; usar ECS Fargate elimina la gestión de servidores y simplifica el despliegue de contenedores.
+
+8. **Terraform**: permite definir toda la infraestructura como código, facilitando versionado, reproducibilidad y automatización en entornos de desarrollo, staging y produccion.
+
+9. **MongoDB**: Atlas ofrece una base de datos gestionada en la nube con replicas, respaldo automático y seguridad integrada, liberando de tareas operativas de mantenimiento.
+
+10. **En conjunto**, este stack garantiza despliegues fiables, seguros y fáciles de replicar, acelerando el time-to-market y reduciendo el esfuerzo operativo.
 ---
 
-Se incluye un documento PDF sobre la ejecucion de cada uno de los endpoints en la ruta raiz llamada "DocumentacionPruebaNequi"
 
-Para dudas de la prueba, contactarme a Andres Felipe Arevalo Moreno al correo de `pipear07@hotmail.com`.
-Para dudas, contáctame a `pipear07@hotmail.com`.
+**Se incluye un documento PDF sobre la ejecucion de cada uno de los endpoints en la ruta raiz llamada src/docs/DocumentacionPruebaNequi.pdf**
+
+
+---
+
+Para dudas, contactame a `pipear07@hotmail.com`

@@ -1,22 +1,17 @@
-﻿version: "3.8"
-
-services:
+﻿services:
   mongo:
     image: mongo:7.0
-    restart: unless-stopped
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db          # persistent volume
+      - mongo_data:/data/db
 
   api:
-    build: .                         # use the root Dockerfile
-    depends_on:
-      - mongo
-    environment:
-      SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/franquicias
+    build: .
     ports:
       - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: ${SPRING_DATA_MONGODB_URI}
 
 volumes:
-  mongo_data:                        # declares the volume
+  mongo_data:
