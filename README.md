@@ -1,6 +1,6 @@
 # Franquicias API
 
-**Prueba tecnica**: API reactiva construida con Spring Boot WebFlux y MongoDB, usando arquitectura hexagonal.
+API reactiva construida con Spring Boot WebFlux y MongoDB, usando arquitectura hexagonal.
 
 **Ramas**: Existen dos ramas llamadas "main" y "master" ambas estan actualizadas entonces no hay ningun problema, pueden escoger cualquiera.
 
